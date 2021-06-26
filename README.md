@@ -17,4 +17,4 @@ files. \
 | Question    | Difficulty |   Topic    | Solved | 
 |-------------|------------|------------|--------|
 | 1 - Two Sum | Easy       | HashTables | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/main/cpp/easy/1-two-sum.h) |
-| 2 - Add Two Numbers| Medium     | LinkedLists | [x](https://github.com/anthonygraca/leetcode/blob/main/src/main/cpp/easy/1-two-sum.h) |
+| 2 - Add Two Numbers| Medium     | LinkedLists | [x](https://github.com/anthonygraca/leetcode/blob/main/src/main/cpp/medium/2-add-two-numbers.h) |
