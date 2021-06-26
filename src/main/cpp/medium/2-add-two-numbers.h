@@ -18,6 +18,9 @@
     leading zeros.
  */
 
+/* TODO: a stack isn't necessary >.> 
+ * just create the linked list */
+
 #include <stack>
 
 namespace leetcode {
