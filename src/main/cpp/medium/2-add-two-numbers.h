@@ -18,11 +18,6 @@
     leading zeros.
  */
 
-/* TODO: a stack isn't necessary >.> 
- * just create the linked list */
-
-#include <stack>
-
 namespace leetcode {
 struct ListNode {
   int val;
@@ -35,32 +30,23 @@ struct ListNode {
 class AddTwoNumbers {
   public:
   ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-    return reverseDigits(sumDigits(l1, l2));
-  }
-  ListNode* reverseDigits(std::stack<int> stack) {
-    ListNode* answer = nullptr;
-    while (!stack.empty()) {
-      answer = new ListNode(stack.top(), answer);
-      stack.pop();
-    }
-    return answer;
-  }
-  std::stack<int> sumDigits(ListNode* l1, ListNode* l2) {
-    std::stack<int> stack;
+    ListNode* answer = new ListNode(0, nullptr);
+    ListNode* head = answer;
     int carry_over = 0;
     while (l1 || l2) {
       int operand_1 = 0;
       int operand_2 = 0;
       if (l1 != nullptr) {
         operand_1 = l1->val;
-	l1 = l1->next;
+        l1 = l1->next;
       }
       if (l2 != nullptr) {
         operand_2 = l2->val;
-	l2 = l2->next;
+        l2 = l2->next;
       }
       int sum = operand_1 + operand_2 + carry_over;
-      stack.push(sum % 10);
+      answer->next = new ListNode(sum % 10, nullptr);
+      answer = answer->next;
       if (sum / 10 > 0) {
         carry_over = 1;
       }
@@ -69,9 +55,13 @@ class AddTwoNumbers {
       }
     }
     if (carry_over) {
-      stack.push(carry_over);
+      answer->next = new ListNode(carry_over, nullptr);
+      answer = answer->next;
     }
-    return stack;
+    ListNode* old_head = head;
+    head = head->next;
+    delete old_head;
+    return head;
   }
 };
 } // namespace leetcode
