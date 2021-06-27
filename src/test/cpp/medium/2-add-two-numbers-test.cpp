@@ -30,36 +30,27 @@ leetcode::ListNode* getLinkedListForm(std::vector<int>);
 bool isEqual(leetcode::ListNode*, leetcode::ListNode*);
 
 TEST_F(AddTwoNumbers, FirstExample) {
-  std::vector<int> input1{2, 4, 3};
-  std::vector<int> input2{5, 6, 4};
-  std::vector<int> output{7, 0, 8};
-  l1 = getLinkedListForm(input1);
-  l2 = getLinkedListForm(input2);
-  expected_output = getLinkedListForm(output);
+  l1 = getLinkedListForm({2, 4, 3});
+  l2 = getLinkedListForm({5, 6, 4});
+  expected_output = getLinkedListForm({7,0,8});
   leetcode::AddTwoNumbers solution;
   actual_output = solution.addTwoNumbers(l1, l2);
   ASSERT_TRUE(isEqual(expected_output, actual_output));
 }
 
 TEST_F(AddTwoNumbers, SecondExample) {
-  std::vector<int> input1{0};
-  std::vector<int> input2{0};
-  std::vector<int> output{0};
-  l1 = getLinkedListForm(input1);
-  l2 = getLinkedListForm(input2);
-  expected_output = getLinkedListForm(output);
+  l1 = getLinkedListForm({0});
+  l2 = getLinkedListForm({0});
+  expected_output = getLinkedListForm({0});
   leetcode::AddTwoNumbers solution;
   actual_output = solution.addTwoNumbers(l1, l2);
   ASSERT_TRUE(isEqual(expected_output, actual_output));
 }
 
 TEST_F(AddTwoNumbers, ThirdExample) {
-  std::vector<int> input1{9, 9, 9, 9, 9, 9, 9};
-  std::vector<int> input2{9, 9, 9, 9};
-  std::vector<int> output{8, 9, 9, 9, 0, 0, 0, 1};
-  l1 = getLinkedListForm(input1);
-  l2 = getLinkedListForm(input2);
-  expected_output = getLinkedListForm(output);
+  l1 = getLinkedListForm({9, 9, 9, 9, 9, 9, 9});
+  l2 = getLinkedListForm({9, 9, 9, 9});
+  expected_output = getLinkedListForm({8, 9, 9, 9, 0, 0, 0, 1});
   leetcode::AddTwoNumbers solution;
   actual_output = solution.addTwoNumbers(l1, l2);
   ASSERT_TRUE(isEqual(expected_output, actual_output));
