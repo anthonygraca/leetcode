@@ -1,5 +1,12 @@
 # LeetCode Practice
 
+## Why Practice?
+1. Data Stuctures and Algorithms are important. 
+2. There is always someone better than you.
+3. Edge cases are important
+4. Hard work beats talent
+5. Planning is essential to software development
+
 ## How to Build
 ### C++ Code with CMake
 [CMake](https://cmake.org/) (version >= 3.19.7) is the build tool that manages 
