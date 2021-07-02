@@ -2,7 +2,9 @@
 
 #include "gtest/gtest.h"
 
-/*
+#include <string>
+#include <vector>
+
 TEST(LongestSubstringWithoutRepeatingCharacters, FirstExample) {
   std::string input{"abcabcbb"};
   leetcode::LongestSubstring solution;
@@ -19,11 +21,4 @@ TEST(LongestSubstringWithoutRepeatingCharacters, ThirdExample) {
   std::string input{"pkwwkew"};
   leetcode::LongestSubstring solution;
   ASSERT_EQ(3, solution.lengthOfLongestSubstring(input));
-}
-*/
-
-TEST(LongestSubstringWithoutRepeatingCharacters, FourthExample) {
-  std::string input{""};
-  leetcode::LongestSubstring solution;
-  ASSERT_EQ(0, solution.lengthOfLongestSubstring(input));
 }

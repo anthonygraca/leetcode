@@ -56,7 +56,6 @@ class AddTwoNumbers {
     }
     if (carry_over) {
       answer->next = new ListNode(carry_over, nullptr);
-      answer = answer->next;
     }
     ListNode* old_head = head;
     head = head->next;

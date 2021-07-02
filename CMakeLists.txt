@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.19.7)
 
 project(Leetcode)
 
+set(CMAKE_CXX_STANDARD 14)
+
 set(CMAKE_BUILD_TYPE Debug)
 
 set(source-directory
