@@ -21,9 +21,9 @@ files. \
 `make && make test` to compile source and run tests.
 
 ## Table of Contents
-| Question    | Difficulty |   Topic    | Solved | Unit Tests |
-|-------------|------------|------------|--------|------------|
-| 1 - Two Sum | Easy       | HashTables | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/main/cpp/easy/1-two-sum.h) | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/test/cpp/easy/1-two-sum-test.cpp) 
-| 2 - Add Two Numbers| Medium     | LinkedLists | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/main/cpp/medium/2-add-two-numbers.h) | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/test/cpp/medium/2-add-two-numbers-test.cpp) |
-| 3 - Longest Substring Without Repeating Characters | Medium     | Sliding Window | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/main/cpp/medium/3-longest-substring-without-repeating-characters.h) | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/test/cpp/medium/3-longest-substring-without-repeating-characters-test.cpp) |
+| Question    | Difficulty |   Topic    | Solved | Unit Tests | Time | Space |
+|-------------|------------|------------|--------|------------|------|-------|
+| 1 - Two Sum | Easy       | HashTables | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/main/cpp/easy/1-two-sum.h) | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/test/cpp/easy/1-two-sum-test.cpp) | O(n) | O(n) |
+| 2 - Add Two Numbers| Medium     | LinkedLists | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/main/cpp/medium/2-add-two-numbers.h) | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/test/cpp/medium/2-add-two-numbers-test.cpp) | O(n+m) | O(max(n+1,m+1)) |
+| 3 - Longest Substring Without Repeating Characters | Medium     | Sliding Window | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/main/cpp/medium/3-longest-substring-without-repeating-characters.h) | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/test/cpp/medium/3-longest-substring-without-repeating-characters-test.cpp) | O(n) | O(n) |
 | 4 - Median of Two Sorted Arrays | Hard     | Divide and Conquer | [x](https://github.com/anthonygraca/leetcode/blob/main/src/main/cpp/hard/4-median-of-two-sorted-arrays.h) | [x](https://github.com/anthonygraca/leetcode/blob/main/src/test/cpp/hard/4-median-of-two-sorted-arrays-test.cpp) |
