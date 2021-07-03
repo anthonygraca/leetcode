@@ -14,17 +14,21 @@
 #include <algorithm>
 #include <deque>
 #include <string>
+#include <unordered_set>
 
 namespace leetcode {
 class LongestSubstring {
   public:
     int lengthOfLongestSubstring(std::string s) {
-      std::deque<char> q; 
       int longest_length = 0;
+      std::deque<char> q; 
+      std::unordered_set<char> lookup;
       for (int i = 0; i < s.length(); i++) {
-        while (std::find(q.begin(), q.end(), s[i]) != q.end()) {
+        while (lookup.find(s[i]) != lookup.end()) {
+          lookup.erase(q.front());
           q.pop_front();
         }
+	lookup.insert(s[i]);
         q.push_back(s[i]);
 	longest_length = max(longest_length, q.size());
       }
