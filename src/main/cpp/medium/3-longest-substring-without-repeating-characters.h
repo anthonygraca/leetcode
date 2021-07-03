@@ -12,7 +12,7 @@
 */
 
 #include <algorithm>
-#include <deque>
+#include <queue>
 #include <string>
 #include <unordered_set>
 
@@ -21,15 +21,15 @@ class LongestSubstring {
   public:
     int lengthOfLongestSubstring(std::string s) {
       int longest_length = 0;
-      std::deque<char> q; 
+      std::queue<char> q; 
       std::unordered_set<char> lookup;
       for (int i = 0; i < s.length(); i++) {
         while (lookup.find(s[i]) != lookup.end()) {
           lookup.erase(q.front());
-          q.pop_front();
+          q.pop();
         }
 	lookup.insert(s[i]);
-        q.push_back(s[i]);
+        q.push(s[i]);
 	longest_length = max(longest_length, q.size());
       }
       return longest_length;
