@@ -1,11 +1,11 @@
 # LeetCode Practice
 
 ## Why Practice?
-1. Data Stuctures and Algorithms are important. 
-2. There is always someone better than you.
-3. Edge cases are important
-4. Hard work beats talent
-5. Planning is essential to software development
+1. Data Stuctures and Algorithms are important. [Old codebases can gain huge speedups](https://nee.lv/2021/02/28/How-I-cut-GTA-Online-loading-times-by-70/)
+2. There is always someone better than you and we can always learn from their work.
+3. Edge cases are important.
+4. Hard work beats talent.
+5. Planning and the ability to communicate ideas is essential to software development
 
 ## How to Build
 ### C++ Code with CMake
@@ -14,7 +14,7 @@ all of the C++ code in this project. Code is compiled with a C++14 compiler.
 
 #### Normal Usage
 Do the "cmake dance". \
-`mkdir build` to create a separate build folder to isolate generate cmake build
+`mkdir build` to create a separate build folder to isolate generated cmake build
 files. \
 `cd build` to enter build folder. \
 `cmake ..` to tell cmake to look at the CMakeLists.txt at project root. \
