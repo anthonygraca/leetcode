@@ -19,7 +19,7 @@ public:
   bool containsDuplicate(std::vector<int>& nums) {
     std::unordered_set<int> hashset;
     for (auto num : nums) {
-      if (std::find(hashset.begin(), hashset.end(), num) == hashset.end()) {
+      if (hashset.find(num) == hashset.end()) {
         hashset.insert(num);
       }
       else {
