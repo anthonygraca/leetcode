@@ -5,6 +5,17 @@
 TEST(ContainsDuplicate, FirstExample) {
   std::vector<int> nums{1,2,3,1};
   leetcode::ContainsDuplicate solution;
-  bool expected{true};
-  ASSERT_EQ(expected, solution.containsDuplicate(nums));
+  ASSERT_TRUE(solution.containsDuplicate(nums));
+}
+
+TEST(ContainsDuplicate, SecondExample) {
+  std::vector<int> nums{1,2,3,4};
+  leetcode::ContainsDuplicate solution;
+  ASSERT_FALSE(solution.containsDuplicate(nums));
+}
+
+TEST(ContainsDuplicate, ThirdExample) {
+  std::vector<int> nums{1,1,1,3,3,4,3,2,4,2};
+  leetcode::ContainsDuplicate solution;
+  ASSERT_TRUE(solution.containsDuplicate(nums));
 }
