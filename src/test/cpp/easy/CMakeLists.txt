@@ -7,7 +7,7 @@ add_executable(best-time-to-buy-and-sell-stock-test
 target_link_libraries(best-time-to-buy-and-sell-stock-test gtest_main
                       best-time-to-buy-and-sell-stock)
 add_test(NAME best-time-to-buy-and-sell-stock-test COMMAND
-         best-time-to-buy-and-sell-stock-tet)
+         best-time-to-buy-and-sell-stock-test)
 
 add_executable(contains-duplicate-test 217-contains-duplicate-test.cpp)
 target_link_libraries(contains-duplicate-test gtest_main contains-duplicate)
