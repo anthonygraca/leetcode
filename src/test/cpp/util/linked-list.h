@@ -1,15 +1,9 @@
 #ifndef LEETCODE_TEST_UTILITIES_LINKED_LIST_H_
 #define LEETCODE_TEST_UTILITIES_LINKED_LIST_H_
 
-namespace leetcode {
-struct ListNode {
-  int val;
-  ListNode *next;
-  ListNode() : val(0), next(nullptr) {}
-  ListNode(int x) : val(x), next(nullptr) {}
-  ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
+#include "util/list-node.h"
 
+namespace leetcode {
 leetcode::ListNode* getLinkedListForm(std::vector<int> input) {
   leetcode::ListNode* result = nullptr;
   for (int i = input.size() - 1; i >= 0; i--) {
