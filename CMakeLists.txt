@@ -8,7 +8,9 @@ set(CMAKE_BUILD_TYPE Debug)
 
 set(source-directory
   "${CMAKE_SOURCE_DIR}/src/main/cpp/")
-include_directories(${source-directory})
+set(test-directory
+  "${CMAKE_SOURCE_DIR}/src/test/cpp/")
+include_directories(${source-directory} ${test-directory})
 
 set(CMAKE_CXX_STANDARD 14)
 

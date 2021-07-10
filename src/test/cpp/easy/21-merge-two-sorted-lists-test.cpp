@@ -2,6 +2,8 @@
 
 #include "gtest/gtest.h"
 
+#include "util/linked-list.h"
+
 /*
 TEST(MergeTwoSortedLists, FirstExample) {
 

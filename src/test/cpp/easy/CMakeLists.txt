@@ -4,7 +4,7 @@ add_test(NAME two-sum-test COMMAND two-sum-test)
 
 add_executable(merge-two-sorted-lists-test 21-merge-two-sorted-lists-test.cpp)
 target_link_libraries(merge-two-sorted-lists-test gtest_main
-                      merge-two-sorted-lists)
+                      merge-two-sorted-lists linked-list-util)
 add_test(NAME merge-two-sorted-lists-test COMMAND merge-two-sorted-lists-test)
 
 add_executable(best-time-to-buy-and-sell-stock-test
