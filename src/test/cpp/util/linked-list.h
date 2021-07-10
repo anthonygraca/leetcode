@@ -5,7 +5,7 @@
 
 namespace leetcode {
 leetcode::ListNode* getLinkedListForm(void) {
-  return new ListNode();
+  return nullptr;
 }
 
 leetcode::ListNode* getLinkedListForm(std::vector<int> input) {

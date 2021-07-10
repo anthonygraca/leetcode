@@ -27,7 +27,6 @@ TEST_F(MergeTwoSortedLists, FirstExample) {
   ASSERT_TRUE(leetcode::isEqual(expected, actual));
 }
 
-/*
 TEST_F(MergeTwoSortedLists, SecondExample) {
   l1 = leetcode::getLinkedListForm();
   l2 = leetcode::getLinkedListForm();
@@ -45,4 +44,3 @@ TEST_F(MergeTwoSortedLists, ThirdExample) {
   actual = solution.mergeTwoLists(l1, l2);
   ASSERT_TRUE(leetcode::isEqual(expected, actual));
 }
-*/
