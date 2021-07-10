@@ -18,14 +18,6 @@ class AddTwoNumbers : public ::testing::Test {
     leetcode::ListNode* l2 = nullptr;
     leetcode::ListNode* expected_output = nullptr;
     leetcode::ListNode* actual_output = nullptr;
-  private:
-    void releaseNodes(leetcode::ListNode* list) {
-      while (list != nullptr) {
-        leetcode::ListNode* currentNode = list;
-        list = list->next;
-        delete currentNode;
-      }
-    }
 };
 
 TEST_F(AddTwoNumbers, FirstExample) {
