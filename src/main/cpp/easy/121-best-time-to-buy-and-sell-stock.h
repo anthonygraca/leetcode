@@ -16,13 +16,25 @@
   * 0 <= prices[i] <= 10^4
  */
 
+#include <algorithm>
+#include <climits>
 #include <vector>
 
 namespace leetcode {
 class BestTimeToBuyAndSellStock {
 public:
   int maxProfit(std::vector<int>& nums) {
-    return 5;
+    int profit = 0;
+    int buy_low = INT_MAX;
+    for (auto num : nums) {
+      if (buy_low > num) {
+        buy_low = num;
+      }
+      else {
+        profit = std::max(profit, num - buy_low);
+      }
+    }
+    return profit;
   }
 };
 } // namespace leetcode
