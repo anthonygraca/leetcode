@@ -5,3 +5,7 @@ add_test(NAME add-two-numbers-test COMMAND add-two-numbers-test)
 add_executable(longest-substring-without-repeating-characters-test 3-longest-substring-without-repeating-characters-test.cpp)
 target_link_libraries(longest-substring-without-repeating-characters-test gtest_main longest-substring-without-repeating-characters)
 add_test(NAME longest-substring-without-repeating-characters-test COMMAND longest-substring-without-repeating-characters-test)
+
+add_executable(product-of-array-except-self-test 238-product-of-array-except-self-test.cpp)
+target_link_libraries(product-of-array-except-self-test gtest_main product-of-array-except-self)
+add_test(NAME product-of-array-except-self-test COMMAND product-of-array-except-self-test)
