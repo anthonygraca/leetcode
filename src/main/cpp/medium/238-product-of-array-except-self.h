@@ -17,6 +17,9 @@
    * -30 <= nums[i] <= 30
    * The product of any prefix or suffix of nums is guaranteed to fit in a 
      32-bit integer.
+
+  Noteworthy:
+   * Initialize a vector of a specific size with a default value
  */
 
 #include <vector>
@@ -25,7 +28,38 @@ namespace leetcode {
 class ProductOfArrayExceptSelf {
 public:
   std::vector<int> productExceptSelf(std::vector<int>& nums) {
-    std::vector<int> answer{24, 12, 8, 6};
+    // initialize a vector of size nums.size() w/ default value of 1
+    int size = nums.size();
+    std::vector<int> left_side(size, 1); 
+    std::vector<int> right_side(size, 1); 
+    std::vector<int> answer(size, 1); 
+    for (int i = 0; i < size; i++) {
+      if (i == 0) {
+        left_side[0] = nums[0];
+      }
+      else {
+        left_side[i] = left_side[i-1] * nums[i];
+      }
+    }
+    for (int i = size-1; i >= 0; i--) {
+      if (i == size-1) {
+        right_side[size-1] = nums[size-1];
+      }
+      else {
+        right_side[i] = right_side[i+1] * nums[i];
+      }
+    }
+    for (int i = 0; i < size; i++) {
+      if (i == 0) {
+        answer[0] = right_side[1];
+      }
+      else if (i == size-1) {
+        answer[size-1] = left_side[size-2];
+      }
+      else {
+        answer[i] = left_side[i-1] * right_side[i+1];
+      }
+    }
     return answer;
   }
 };
