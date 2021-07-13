@@ -20,6 +20,12 @@
 
   Noteworthy:
    * Initialize a vector of a specific size with a default value
+
+  Notes:
+    nums = [1, 2, 3, 4]
+    left = [1, 1, 2, 6]
+    right =[24, 12, 4, 1]
+    ans = [24, 12, 8, 6]
  */
 
 #include <vector>
@@ -28,37 +34,18 @@ namespace leetcode {
 class ProductOfArrayExceptSelf {
 public:
   std::vector<int> productExceptSelf(std::vector<int>& nums) {
-    // initialize a vector of size nums.size() w/ default value of 1
     int size = nums.size();
     std::vector<int> left_side(size, 1); 
     std::vector<int> right_side(size, 1); 
     std::vector<int> answer(size, 1); 
-    for (int i = 0; i < size; i++) {
-      if (i == 0) {
-        left_side[0] = nums[0];
-      }
-      else {
-        left_side[i] = left_side[i-1] * nums[i];
-      }
+    for (int i = 1; i < size; i++) {
+      left_side[i] = left_side[i-1] * nums[i-1];
     }
-    for (int i = size-1; i >= 0; i--) {
-      if (i == size-1) {
-        right_side[size-1] = nums[size-1];
-      }
-      else {
-        right_side[i] = right_side[i+1] * nums[i];
-      }
+    for (int i = size-2; i >= 0; i--) {
+      right_side[i] = right_side[i+1] * nums[i+1];
     }
     for (int i = 0; i < size; i++) {
-      if (i == 0) {
-        answer[0] = right_side[1];
-      }
-      else if (i == size-1) {
-        answer[size-1] = left_side[size-2];
-      }
-      else {
-        answer[i] = left_side[i-1] * right_side[i+1];
-      }
+      answer[i] = left_side[i] * right_side[i];
     }
     return answer;
   }
