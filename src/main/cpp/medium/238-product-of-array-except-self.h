@@ -40,7 +40,6 @@ class ProductOfArrayExceptSelf {
 public:
   std::vector<int> productExceptSelf(std::vector<int>& nums) {
     int size = nums.size();
-    std::vector<int> right_side(size, 1); 
     std::vector<int> answer(size, 1); 
     for (int i = 1; i < size; i++) {
       answer[i] = answer[i-1] * nums[i-1];
