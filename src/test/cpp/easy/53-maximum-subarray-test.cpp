@@ -8,3 +8,19 @@ TEST(MaximumSubarray, FirstExample) {
   int expected{6};
   ASSERT_EQ(expected, solution.maxSubArray(nums));
 }
+
+/*
+TEST(MaximumSubarray, SecondExample) {
+  std::vector<int> nums{1};
+  leetcode::MaximumSubarray solution;
+  int expected{1};
+  ASSERT_EQ(expected, solution.maxSubArray(nums));
+}
+
+TEST(MaximumSubarray, ThirdExample) {
+  std::vector<int> nums{5, 4, -1, 7, 8};
+  leetcode::MaximumSubarray solution;
+  int expected{23};
+  ASSERT_EQ(expected, solution.maxSubArray(nums));
+}
+*/
