@@ -26,6 +26,11 @@
     left = [1, 1, 2, 6]
     right =[24, 12, 4, 1]
     ans = [24, 12, 8, 6]
+
+  In-place solution:
+       nums = [1, 2, 3, 4]
+    1.) ans = [1, 1, 2, 6]
+    2.) ans = [24, 12, 8, 6]
  */
 
 #include <vector>
@@ -35,17 +40,15 @@ class ProductOfArrayExceptSelf {
 public:
   std::vector<int> productExceptSelf(std::vector<int>& nums) {
     int size = nums.size();
-    std::vector<int> left_side(size, 1); 
     std::vector<int> right_side(size, 1); 
     std::vector<int> answer(size, 1); 
     for (int i = 1; i < size; i++) {
-      left_side[i] = left_side[i-1] * nums[i-1];
+      answer[i] = answer[i-1] * nums[i-1];
     }
+    int product = 1;
     for (int i = size-2; i >= 0; i--) {
-      right_side[i] = right_side[i+1] * nums[i+1];
-    }
-    for (int i = 0; i < size; i++) {
-      answer[i] = left_side[i] * right_side[i];
+      product *= nums[i+1];
+      answer[i] = answer[i] * product;
     }
     return answer;
   }
