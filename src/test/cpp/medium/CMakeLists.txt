@@ -10,6 +10,10 @@ add_executable(maximum-product-subarray-test 152-maximum-product-subarray-test.c
 target_link_libraries(maximum-product-subarray-test gtest_main maximum-product-subarray)
 add_test(NAME maximum-product-subarray-test COMMAND maximum-product-subarray-test)
 
+add_executable(find-minimum-in-rotated-sorted-array-test 153-find-minimum-in-rotated-sorted-array-test.cpp)
+target_link_libraries(find-minimum-in-rotated-sorted-array-test gtest_main find-minimum-in-rotated-sorted-array)
+add_test(NAME find-minimum-in-rotated-sorted-array-test COMMAND find-minimum-in-rotated-sorted-array-test)
+
 add_executable(product-of-array-except-self-test 238-product-of-array-except-self-test.cpp)
 target_link_libraries(product-of-array-except-self-test gtest_main product-of-array-except-self)
 add_test(NAME product-of-array-except-self-test COMMAND product-of-array-except-self-test)
