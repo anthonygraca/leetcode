@@ -8,3 +8,12 @@ TEST(MaximumProductSubarray, FirstExample) {
   int expected{6};
   ASSERT_EQ(expected, solution.maxProduct(nums));
 }
+
+/*
+TEST(MaximumProductSubarray, SecondExample) {
+  std::vector<int> nums{-2, 0, -1};
+  leetcode::MaximumProductSubarray solution;
+  int expected{0};
+  ASSERT_EQ(expected, solution.maxProduct(nums));
+}
+*/
