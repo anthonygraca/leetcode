@@ -6,6 +6,10 @@ add_executable(longest-substring-without-repeating-characters-test 3-longest-sub
 target_link_libraries(longest-substring-without-repeating-characters-test gtest_main longest-substring-without-repeating-characters)
 add_test(NAME longest-substring-without-repeating-characters-test COMMAND longest-substring-without-repeating-characters-test)
 
+add_executable(search-in-rotated-sorted-array-test 33-search-in-rotated-sorted-array-test.cpp)
+target_link_libraries(search-in-rotated-sorted-array-test gtest_main search-in-rotated-sorted-array)
+add_test(NAME search-in-rotated-sorted-array-test COMMAND search-in-rotated-sorted-array-test)
+
 add_executable(maximum-product-subarray-test 152-maximum-product-subarray-test.cpp)
 target_link_libraries(maximum-product-subarray-test gtest_main maximum-product-subarray)
 add_test(NAME maximum-product-subarray-test COMMAND maximum-product-subarray-test)
