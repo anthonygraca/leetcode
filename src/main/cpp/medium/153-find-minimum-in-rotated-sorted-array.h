@@ -42,13 +42,16 @@ public:
     if (mid < high && nums[mid + 1] < nums[mid]) {
       return nums[mid + 1];
     }
+    if (low < mid && nums[mid] < nums[mid - 1]) {
+      return nums[mid];
+    }
 
     // rotation is on the left side
     if (nums[high] > nums[mid]) {
       return findMin(nums, low, mid-1);
     }
     // rotation is on the right side
-    return findMin(nums, mid , high);
+    return findMin(nums, mid + 1, high);
   }
 };
 
