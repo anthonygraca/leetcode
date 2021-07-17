@@ -30,7 +30,25 @@ namespace leetcode {
 class FindMinimumInRotatedSortedArray {
 public:
   int findMin(std::vector<int>& nums) {
-    return 1;
+    return findMin(nums, 0, nums.size());
+  }
+
+  int findMin(std::vector<int>& nums, int low, int high) {
+    if (high < low) return nums[low];
+
+    int mid = low + (high - low) / 2;
+
+    // handles something like 3, 4, 5, 1, 2
+    if (mid < high && nums[mid + 1] < nums[mid]) {
+      return nums[mid + 1];
+    }
+
+    // rotation is on the left side
+    if (nums[high] > nums[mid]) {
+      return findMin(nums, low, mid-1);
+    }
+    // rotation is on the right side
+    return findMin(nums, mid , high);
   }
 };
 
