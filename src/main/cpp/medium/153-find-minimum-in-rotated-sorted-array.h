@@ -29,7 +29,7 @@
 class FindMinimumInRotatedSortedArray {
 public:
   int findMin(std::vector<int>& nums) {
-    if (nums.size() == 1) return nums[0];
+    if (nums.size() == 1) return nums[0]; // trivial case, only 1 element
     int low = 0;
     int high = nums.size() - 1;
     // while there is a rotation, throw away half of the array that is a 
@@ -45,7 +45,7 @@ public:
         low = mid;
       }
     }
-    // skip while, because no rotation
+    // we skipped while because no rotation. smallest element is nums[low]
     return nums[low];
   }
 };
