@@ -26,15 +26,18 @@
 
 #include <vector>
 
-namespace leetcode {
 class FindMinimumInRotatedSortedArray {
 public:
   int findMin(std::vector<int>& nums) {
+    if (nums.size() == 1) return nums[0];
     int low = 0;
     int high = nums.size() - 1;
-
-    while (low < high) {
-      int mid = low + (low - high) / 2;
+    // while there is a rotation, throw away half of the array that is a 
+    // strictly monotonic subsequence
+    while (!(nums[low] < nums[high])) {
+      // can't subdivide any further, return nums[high] since it's smaller
+      if (high - low == 1) return nums[high];
+      int mid = low + (high - low) / 2;
       if (nums[mid] < nums[high]) {
         high = mid;
       }
@@ -42,6 +45,7 @@ public:
         low = mid;
       }
     }
+    // skip while, because no rotation
     return nums[low];
   }
 };
