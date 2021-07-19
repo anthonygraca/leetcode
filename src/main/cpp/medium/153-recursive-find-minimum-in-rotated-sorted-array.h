@@ -35,6 +35,22 @@ public:
     if (nums.size() == 1) return nums[0]; // trivial case, only 1 element
     int low = 0;
     int high = nums.size() - 1;
+    if (nums[low] < nums[high]) return nums[low]; // handle non-rotated case
+    return findMin(nums, low, high);
+  }
+
+  int findMin(std::vector<int>& nums, int low, int high) {
+    int mid = low + (high - low) / 2;
+    if (high - low == 1) return nums[high];
+    if (nums[mid] < nums[high]) {
+      return findMin(nums, low, mid);
+    }
+    return findMin(nums, mid, high);
+  }
+
+/*
+    int low = 0;
+    int high = nums.size() - 1;
     // while there is a rotation, throw away half of the array that is a 
     // strictly monotonic subsequence
     while (!(nums[low] < nums[high])) {
@@ -50,7 +66,7 @@ public:
     }
     // we skipped while because no rotation. smallest element is nums[low]
     return nums[low];
-  }
+*/
 };
 
 } // namespace leetcode
