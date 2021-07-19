@@ -1,5 +1,5 @@
-#ifndef LEETCODE_MEDIUM_153_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY_H_
-#define LEETCODE_MEDIUM_153_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY_H_
+#ifndef LEETCODE_MEDIUM_153_RECURSIVE_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY_H_
+#define LEETCODE_MEDIUM_153_RECURSIVE_FIND_MINIMUM_IN_ROTATED_SORTED_ARRAY_H_
 
 /*
   Suppose an array of length n sorted in ascending order is rotated between 1 
@@ -29,7 +29,7 @@
 
 namespace leetcode {
 
-class FindMinimumInRotatedSortedArray {
+class RecursiveFindMinimumInRotatedSortedArray {
 public:
   int findMin(std::vector<int>& nums) {
     if (nums.size() == 1) return nums[0]; // trivial case, only 1 element
