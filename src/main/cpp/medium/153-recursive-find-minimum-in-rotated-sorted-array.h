@@ -36,37 +36,17 @@ public:
     int low = 0;
     int high = nums.size() - 1;
     if (nums[low] < nums[high]) return nums[low]; // handle non-rotated case
-    return findMin(nums, low, high);
+    return findRotatedSeam(nums, low, high);
   }
 
-  int findMin(std::vector<int>& nums, int low, int high) {
+  int findRotatedSeam(std::vector<int>& nums, int low, int high) {
     int mid = low + (high - low) / 2;
-    if (high - low == 1) return nums[high];
+    if (high - low == 1) return nums[high]; // base case: can't divide anymore
     if (nums[mid] < nums[high]) {
-      return findMin(nums, low, mid);
+      return findRotatedSeam(nums, low, mid);
     }
-    return findMin(nums, mid, high);
+    return findRotatedSeam(nums, mid, high);
   }
-
-/*
-    int low = 0;
-    int high = nums.size() - 1;
-    // while there is a rotation, throw away half of the array that is a 
-    // strictly monotonic subsequence
-    while (!(nums[low] < nums[high])) {
-      // can't subdivide any further, return nums[high] since it's smaller
-      if (high - low == 1) return nums[high];
-      int mid = low + (high - low) / 2;
-      if (nums[mid] < nums[high]) {
-        high = mid;
-      }
-      else {
-        low = mid;
-      }
-    }
-    // we skipped while because no rotation. smallest element is nums[low]
-    return nums[low];
-*/
 };
 
 } // namespace leetcode

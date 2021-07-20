@@ -38,7 +38,7 @@ public:
     // while there is a rotation, throw away half of the array that is a 
     // strictly monotonic subsequence
     while (!(nums[low] < nums[high])) {
-      // can't subdivide any further, return nums[high] since it's smaller
+      // can't divide any further, return nums[high] since it's smaller
       if (high - low == 1) return nums[high];
       int mid = low + (high - low) / 2;
       if (nums[mid] < nums[high]) {
