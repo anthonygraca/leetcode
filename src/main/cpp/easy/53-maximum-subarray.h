@@ -20,7 +20,7 @@ namespace leetcode {
 class MaximumSubarray {
 public:
   int maxSubArray(std::vector<int>& nums) {
-    return maxSubArray(nums, 0, nums.size());
+    return maxSubArray(nums, 0, nums.size()-1);
   }
   int maxSubArray(std::vector<int>& nums, int low, int high) {
     if (!(high == low)) { 
@@ -39,7 +39,7 @@ public:
     int left_sum = INT_MIN;
     int sum = 0;
     int mid = (low + high)/2;
-    for (int i = mid; mid >= low; i--) {
+    for (int i = mid; i >= low; i--) {
       sum += nums[i];
       if (sum > left_sum) left_sum = sum;
     }
