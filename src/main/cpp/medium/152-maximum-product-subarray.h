@@ -18,6 +18,7 @@
  */
 
 #include <vector>
+#include <cmath>
 
 namespace leetcode {
 class MaximumProductSubarray {
@@ -28,31 +29,30 @@ public:
   int maxProduct(std::vector<int>& nums, int low, int high) {
     if (!(high == low)) { 
       int mid = (low + high)/2;
-      int left_sum = maxProduct(nums, low, mid);
-      int right_sum = maxProduct(nums, mid + 1, high);
+      int left_prod = maxProduct(nums, low, mid);
+      int right_prod = maxProduct(nums, mid + 1, high);
       int cross_sum = maxCrossingSubarray(nums, low, high);
-      if (left_sum >= right_sum && left_sum >= cross_sum) return left_sum;
-      else if (right_sum >= left_sum && right_sum >= cross_sum) return right_sum;
+      if (left_prod >= right_prod && left_prod >= cross_sum) return left_prod;
+      else if (right_prod >= left_prod && right_prod >= cross_sum) return right_prod;
       else return cross_sum;
     }
     return nums[low]; // base case: only 1 element
-
   }
   int maxCrossingSubarray(std::vector<int>& nums, int low, int high) {
-    int left_sum = INT_MIN;
-    int sum = 1;
+    int left_prod = INT_MIN;
+    int prod = 1;
     int mid = (low + high)/2;
     for (int i = mid; i >= low; i--) {
-      sum *= nums[i];
-      if (sum > left_sum) left_sum = sum;
+      prod *= nums[i];
+      if (std::abs(prod) > left_prod) left_prod = prod;
     }
-    int right_sum = INT_MIN;
-    sum = 1;
+    int right_prod = INT_MIN;
+    prod = 1;
     for (int i = mid + 1; i <= high; i++) {
-      sum *= nums[i];
-      if (sum > right_sum) right_sum = sum;
+      prod *= nums[i];
+      if (std::abs(prod) > right_prod) right_prod = prod;
     }
-    return left_sum * right_sum;
+    return left_prod * right_prod;
   }
 };
 } // namespace leetcode
