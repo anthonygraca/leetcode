@@ -40,11 +40,12 @@ public:
   }
   int maxCrossingSubarray(std::vector<int>& nums, int low, int high) {
     int left_prod = INT_MIN;
-    int prod = 1;
+    int local_max_prod = 1;
+    int local_mix_prod = 1;
     int mid = (low + high)/2;
     for (int i = mid; i >= low; i--) {
-      prod *= nums[i];
-      if (std::abs(prod) > left_prod) left_prod = prod;
+      local_max_prod *= nums[i];
+      if (prod > left_prod) left_prod = local_max_prod;
     }
     int right_prod = INT_MIN;
     prod = 1;
