@@ -52,14 +52,10 @@ public:
     return left_sum + right_sum;
   }
 
-  /*
-   * Notes: off by one on for loop check
-   */
   int maxSubArrayMichelle(std::vector<int>& nums) {
-    int n = nums.size();
     int global_max = INT_MIN;
     int curr_max = 0;
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < nums.size(); i++) {
       curr_max += nums[i];
       global_max = std::max(global_max, curr_max);
       if(curr_max < 0) {
