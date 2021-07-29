@@ -25,3 +25,7 @@ add_test(NAME recursive-find-minimum-in-rotated-sorted-array-test COMMAND recurs
 add_executable(product-of-array-except-self-test 238-product-of-array-except-self-test.cpp)
 target_link_libraries(product-of-array-except-self-test gtest_main product-of-array-except-self)
 add_test(NAME product-of-array-except-self-test COMMAND product-of-array-except-self-test)
+
+add_executable(coin-change-test 322-coin-change-test.cpp)
+target_link_libraries(coin-change-test gtest_main coin-change)
+add_test(NAME coin-change-test COMMAND coin-change-test)

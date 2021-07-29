@@ -12,3 +12,5 @@ add_library(find-minimum-in-rotated-sorted-array OBJECT 153-find-minimum-in-rota
 add_library(recursive-find-minimum-in-rotated-sorted-array OBJECT 153-recursive-find-minimum-in-rotated-sorted-array.h)
 
 add_library(product-of-array-except-self OBJECT 238-product-of-array-except-self.h)
+
+add_library(coin-change OBJECT 322-coin-change.h)
