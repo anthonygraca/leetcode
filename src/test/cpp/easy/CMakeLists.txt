@@ -10,6 +10,10 @@ add_executable(maximum-subarray-test 53-maximum-subarray-test.cpp)
 target_link_libraries(maximum-subarray-test gtest_main maximum-subarray)
 add_test(NAME maximum-subarray-test COMMAND maximum-subarray-test)
 
+add_executable(climbing-stairs-test 70-climbing-stairs-test.cpp)
+target_link_libraries(climbing-stairs-test gtest_main climbing-stairs)
+add_test(NAME climbing-stairs-test COMMAND climbing-stairs-test)
+
 add_executable(best-time-to-buy-and-sell-stock-test 121-best-time-to-buy-and-sell-stock-test.cpp)
 target_link_libraries(best-time-to-buy-and-sell-stock-test gtest_main best-time-to-buy-and-sell-stock)
 add_test(NAME best-time-to-buy-and-sell-stock-test COMMAND best-time-to-buy-and-sell-stock-test)
