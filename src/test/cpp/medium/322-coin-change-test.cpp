@@ -13,3 +13,37 @@ TEST(CoinChange, FirstExample) {
   int expected{3};
   ASSERT_EQ(expected, solution.coinChange(coins, amount));
 }
+
+/*
+TEST(CoinChange, SecondExample) {
+  std::vector<int> coins{2};
+  int amount{3};
+  leetcode::CoinChange solution;
+  int expected{-1};
+  ASSERT_EQ(expected, solution.coinChange(coins, amount));
+}
+
+TEST(CoinChange, ThirdExample) {
+  std::vector<int> coins{1};
+  int amount{0};
+  leetcode::CoinChange solution;
+  int expected{0};
+  ASSERT_EQ(expected, solution.coinChange(coins, amount));
+}
+
+TEST(CoinChange, FourthExample) {
+  std::vector<int> coins{1};
+  int amount{1};
+  leetcode::CoinChange solution;
+  int expected{1};
+  ASSERT_EQ(expected, solution.coinChange(coins, amount));
+}
+
+TEST(CoinChange, FifthExample) {
+  std::vector<int> coins{1};
+  int amount{2};
+  leetcode::CoinChange solution;
+  int expected{2};
+  ASSERT_EQ(expected, solution.coinChange(coins, amount));
+}
+*/
