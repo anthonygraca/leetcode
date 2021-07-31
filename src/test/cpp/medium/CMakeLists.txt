@@ -6,6 +6,10 @@ add_executable(longest-substring-without-repeating-characters-test 3-longest-sub
 target_link_libraries(longest-substring-without-repeating-characters-test gtest_main longest-substring-without-repeating-characters)
 add_test(NAME longest-substring-without-repeating-characters-test COMMAND longest-substring-without-repeating-characters-test)
 
+add_executable(container-with-most-water-test 11-container-with-most-water-test.cpp)
+target_link_libraries(container-with-most-water-test gtest_main container-with-most-water)
+add_test(NAME container-with-most-water-test COMMAND container-with-most-water-test)
+
 add_executable(search-in-rotated-sorted-array-test 33-search-in-rotated-sorted-array-test.cpp)
 target_link_libraries(search-in-rotated-sorted-array-test gtest_main search-in-rotated-sorted-array)
 add_test(NAME search-in-rotated-sorted-array-test COMMAND search-in-rotated-sorted-array-test)
