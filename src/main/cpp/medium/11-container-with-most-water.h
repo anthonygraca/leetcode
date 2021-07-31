@@ -22,7 +22,20 @@ namespace leetcode {
 class ContainerWithMostWater {
   public:
     int maxArea(std::vector<int>& height) {
-      return 49;
+      int max_area = 0;
+      int left = 0;
+      int right = height.size() - 1;
+      while (left < right) {
+        int area = (right-left) * std::min(height[left], height[right]);
+        max_area = std::max(area, max_area);
+        if (height[left] < height[right]) {
+          left++;
+        }
+        else {
+          right--;
+        }
+      }
+      return max_area;
     }
 };
 } // namespace leetcode

@@ -14,7 +14,6 @@ TEST(ContainerWithMostWater, FirstExample) {
   ASSERT_EQ(expected, solution.maxArea(height));
 }
 
-/*
 TEST(ContainerWithMostWater, SecondExample) {
   std::vector<int> height{1, 1};
   leetcode::ContainerWithMostWater solution;
@@ -35,4 +34,3 @@ TEST(ContainerWithMostWater, FourthExample) {
   int expected{2};
   ASSERT_EQ(expected, solution.maxArea(height));
 }
-*/
