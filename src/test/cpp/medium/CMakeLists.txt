@@ -10,6 +10,10 @@ add_executable(container-with-most-water-test 11-container-with-most-water-test.
 target_link_libraries(container-with-most-water-test gtest_main container-with-most-water)
 add_test(NAME container-with-most-water-test COMMAND container-with-most-water-test)
 
+add_executable(3sum-test 15-3sum-test.cpp)
+target_link_libraries(3sum-test gtest_main 3sum)
+add_test(NAME 3sum-test COMMAND 3sum-test)
+
 add_executable(search-in-rotated-sorted-array-test 33-search-in-rotated-sorted-array-test.cpp)
 target_link_libraries(search-in-rotated-sorted-array-test gtest_main search-in-rotated-sorted-array)
 add_test(NAME search-in-rotated-sorted-array-test COMMAND search-in-rotated-sorted-array-test)
