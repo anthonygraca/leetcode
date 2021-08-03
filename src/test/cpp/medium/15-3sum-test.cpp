@@ -9,7 +9,6 @@ TEST(ThreeSum, FirstExample) {
   ASSERT_EQ(expected, solution.threeSum(nums));
 }
 
-/*
 TEST(ThreeSum, SecondExample) {
   std::vector<int> nums={};
   leetcode::ThreeSum solution;
@@ -23,4 +22,3 @@ TEST(ThreeSum, ThirdExample) {
   std::vector<std::vector<int>> expected{};
   ASSERT_EQ(expected, solution.threeSum(nums));
 }
-*/
