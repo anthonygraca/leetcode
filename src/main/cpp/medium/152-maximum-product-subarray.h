@@ -19,6 +19,7 @@
 
 #include <vector>
 #include <cmath>
+#include <limits>
 
 namespace leetcode {
 class MaximumProductSubarray {
@@ -39,14 +40,14 @@ public:
     return nums[low]; // base case: only 1 element
   }
   int maxCrossingSubarray(std::vector<int>& nums, int low, int high) {
-    int left_prod = INT_MIN;
+    int left_prod = std::numeric_limits<int>::min();
     int prod = 1;
     int mid = (low + high)/2;
     for (int i = mid; i >= low; i--) {
       prod *= nums[i];
       if (prod > left_prod) left_prod = prod;
     }
-    int right_prod = INT_MIN;
+    int right_prod = std::numeric_limits<int>::min();
     prod = 1;
     for (int i = mid + 1; i <= high; i++) {
       prod *= nums[i];

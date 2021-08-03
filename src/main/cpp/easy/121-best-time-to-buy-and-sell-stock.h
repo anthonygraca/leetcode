@@ -17,7 +17,7 @@
  */
 
 #include <algorithm>
-#include <climits>
+#include <limits>
 #include <vector>
 
 namespace leetcode {
@@ -25,7 +25,7 @@ class BestTimeToBuyAndSellStock {
 public:
   int maxProfit(std::vector<int>& nums) {
     int profit = 0;
-    int buy_low = INT_MAX;
+    int buy_low = std::numeric_limits<int>::max();
     for (auto num : nums) {
       if (buy_low > num) {
         buy_low = num;

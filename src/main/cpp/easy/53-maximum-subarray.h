@@ -15,6 +15,7 @@
  */
 
 #include <vector>
+#include <limits>
 
 namespace leetcode {
 class MaximumSubarray {
@@ -36,14 +37,14 @@ public:
 
   }
   int maxCrossingSubarray(std::vector<int>& nums, int low, int high) {
-    int left_sum = INT_MIN;
+    int left_sum = std::numeric_limits<int>::min();
     int sum = 0;
     int mid = (low + high)/2;
     for (int i = mid; i >= low; i--) {
       sum += nums[i];
       if (sum > left_sum) left_sum = sum;
     }
-    int right_sum = INT_MIN;
+    int right_sum = std::numeric_limits<int>::min();
     sum = 0;
     for (int i = mid + 1; i <= high; i++) {
       sum += nums[i];
@@ -53,7 +54,7 @@ public:
   }
 
   int maxSubArrayMichelle(std::vector<int>& nums) {
-    int global_max = INT_MIN;
+    int global_max = std::numeric_limits<int>::min();
     int curr_max = 0;
     for (int i = 0; i < nums.size(); i++) {
       curr_max += nums[i];
