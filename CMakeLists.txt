@@ -12,8 +12,6 @@ set(test-directory
   "${CMAKE_SOURCE_DIR}/src/test/cpp/")
 include_directories(${source-directory} ${test-directory})
 
-set(CMAKE_CXX_STANDARD 14)
-
 add_subdirectory(src)
 
 #Turn off with -DTEST=OFF

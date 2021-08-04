@@ -28,3 +28,10 @@ TEST(ThreeSum, FourthExample) {
   std::vector<std::vector<int>> expected{{-1, 0, 1}, {0, 0, 0}};
   ASSERT_EQ(expected, solution.threeSum(nums));
 }
+
+TEST(ThreeSum, FifthExample) {
+  std::vector<int> nums={-2,0,1,1,2};
+  leetcode::ThreeSum solution;
+  std::vector<std::vector<int>> expected{{-2, 0, 2}, {-2, 1, 1}};
+  ASSERT_EQ(expected, solution.threeSum(nums));
+}

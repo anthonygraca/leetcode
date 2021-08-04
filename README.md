@@ -10,7 +10,7 @@
 ## How to Build
 ### C++ Code with CMake
 [CMake](https://cmake.org/) (version >= 3.19.7) is the build tool that manages 
-all of the C++ code in this project. Code is compiled with a C++14 compiler.
+all of the C++ code in this project. Code is compiled with a C++20 compiler.
 
 #### Normal Usage
 Do the "cmake dance". \
