@@ -17,4 +17,6 @@ add_library(recursive-find-minimum-in-rotated-sorted-array OBJECT 153-recursive-
 
 add_library(product-of-array-except-self OBJECT 238-product-of-array-except-self.h)
 
+add_library(sum-of-two-integers OBJECT 371-sum-of-two-integers.h)
+
 add_library(coin-change OBJECT 322-coin-change.h)

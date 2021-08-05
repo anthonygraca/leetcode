@@ -34,6 +34,10 @@ add_executable(product-of-array-except-self-test 238-product-of-array-except-sel
 target_link_libraries(product-of-array-except-self-test gtest_main product-of-array-except-self)
 add_test(NAME product-of-array-except-self-test COMMAND product-of-array-except-self-test)
 
+add_executable(sum-of-two-integers-test 371-sum-of-two-integers-test.cpp)
+target_link_libraries(sum-of-two-integers-test gtest_main sum-of-two-integers)
+add_test(NAME sum-of-two-integers-test COMMAND sum-of-two-integers-test)
+
 add_executable(coin-change-test 322-coin-change-test.cpp)
 target_link_libraries(coin-change-test gtest_main coin-change)
 add_test(NAME coin-change-test COMMAND coin-change-test)
