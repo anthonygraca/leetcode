@@ -25,3 +25,7 @@ add_test(NAME number-of-1-bits-test COMMAND number-of-1-bits-test)
 add_executable(contains-duplicate-test 217-contains-duplicate-test.cpp)
 target_link_libraries(contains-duplicate-test gtest_main contains-duplicate)
 add_test(NAME contains-duplicate-test COMMAND contains-duplicate-test)
+
+add_executable(counting-bits-test  338-counting-bits-test.cpp)
+target_link_libraries(counting-bits-test gtest_main counting-bits)
+add_test(NAME counting-bits-test COMMAND counting-bits-test)

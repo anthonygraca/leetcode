@@ -13,3 +13,5 @@ add_library(number-of-1-bits OBJECT 191-number-of-1-bits.h)
 
 add_library(contains-duplicate OBJECT 217-contains-duplicate.h)
 
+add_library(counting-bits OBJECT 338-counting-bits.h)
+
