@@ -14,6 +14,10 @@ add_executable(3sum-test 15-3sum-test.cpp)
 target_link_libraries(3sum-test gtest_main 3sum)
 add_test(NAME 3sum-test COMMAND 3sum-test)
 
+add_executable(letter-combinations-of-a-phone-number-test 17-letter-combinations-of-a-phone-number-test.cpp)
+target_link_libraries(letter-combinations-of-a-phone-number-test gtest_main letter-combinations-of-a-phone-number)
+add_test(NAME letter-combinations-of-a-phone-number-test COMMAND letter-combinations-of-a-phone-number-test)
+
 add_executable(search-in-rotated-sorted-array-test 33-search-in-rotated-sorted-array-test.cpp)
 target_link_libraries(search-in-rotated-sorted-array-test gtest_main search-in-rotated-sorted-array)
 add_test(NAME search-in-rotated-sorted-array-test COMMAND search-in-rotated-sorted-array-test)
