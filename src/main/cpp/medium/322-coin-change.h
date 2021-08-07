@@ -20,12 +20,25 @@
 
 #include <vector>
 
+/* amount == 11
+ * coins == [1, 2, 5]
+ * running_amount (subproblem represents index): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+ * number_of_coins_needed:                       [1, 1, 2, 2, 1, 2, 2, 3, 3, 2 , 3]
+ */
+
 namespace leetcode {
 class CoinChange {
   public:
     int coinChange(std::vector<int>& coins, int amount) {
-      return 3;
-    };
+      if (amount == 0) return 0;
+      std::vector<int> solution_to_subproblems(amount+1, amount+1);
+      int coin_count = 0;
+      for (int i = 1; i < amount+1; i++) {
+        int local_amount = amount;
+        for (int j = 0; j >= 0; j--) {
+        }
+      }
+    }
 };
 } // namespace leetcode
 
