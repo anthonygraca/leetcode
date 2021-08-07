@@ -22,8 +22,8 @@
 
 /* amount == 11
  * coins == [1, 2, 5]
- * running_amount (subproblem represents index): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
- * number_of_coins_needed:                       [1, 1, 2, 2, 1, 2, 2, 3, 3, 2 , 3]
+ * running(subproblem represents index): [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+ * number_of_coins:                      [0, 1, 1, 2, 2, 1, 2, 2, 3, 3, 2 , 3]
  */
 
 namespace leetcode {
@@ -31,13 +31,15 @@ class CoinChange {
   public:
     int coinChange(std::vector<int>& coins, int amount) {
       if (amount == 0) return 0;
-      std::vector<int> solution_to_subproblems(amount+1, amount+1);
-      int coin_count = 0;
+      std::vector<int> subsolution(amount+1, amount+1);
+      subsolution[0] = 0;
       for (int i = 1; i < amount+1; i++) {
-        int local_amount = amount;
-        for (int j = 0; j >= 0; j--) {
+        for (int j = 0; j < coins.size(); j++) {
+          if (coins[j] <= i)
+            subsolution[i] = std::min(subsolution[i-coins[j]] + 1, subsolution[i]);
         }
       }
+      return (subsolution[amount] <= amount ? subsolution[amount] : -1);  
     }
 };
 } // namespace leetcode

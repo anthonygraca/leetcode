@@ -6,7 +6,6 @@
  * Explanation:
  * 11 = 5 + 5 + 1
  */
-/*
 TEST(CoinChange, FirstExample) {
   std::vector<int> coins{1, 2, 5};
   int amount{11};
@@ -22,7 +21,6 @@ TEST(CoinChange, SecondExample) {
   int expected{-1};
   ASSERT_EQ(expected, solution.coinChange(coins, amount));
 }
-*/
 
 TEST(CoinChange, ThirdExample) {
   std::vector<int> coins{1};
@@ -32,7 +30,6 @@ TEST(CoinChange, ThirdExample) {
   ASSERT_EQ(expected, solution.coinChange(coins, amount));
 }
 
-/*
 TEST(CoinChange, FourthExample) {
   std::vector<int> coins{1};
   int amount{1};
@@ -55,4 +52,4 @@ TEST(CoinChange, DynamicBetterThanGreedy) {
   leetcode::CoinChange solution;
   int expected{2};
   ASSERT_EQ(expected, solution.coinChange(coins, amount));
-*/
+}
