@@ -5,6 +5,7 @@ add_library(merge-two-sorted-lists OBJECT 21-merge-two-sorted-lists.h)
 add_library(maximum-subarray OBJECT 53-maximum-subarray.h)
 
 add_library(climbing-stairs OBJECT 70-climbing-stairs.h)
+add_library(recursive-climbing-stairs OBJECT 70-recursive-climbing-stairs.h)
 
 add_library(best-time-to-buy-and-sell-stock OBJECT
             121-best-time-to-buy-and-sell-stock.h)

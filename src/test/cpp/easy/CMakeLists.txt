@@ -14,6 +14,10 @@ add_executable(climbing-stairs-test 70-climbing-stairs-test.cpp)
 target_link_libraries(climbing-stairs-test gtest_main climbing-stairs)
 add_test(NAME climbing-stairs-test COMMAND climbing-stairs-test)
 
+add_executable(recursive-climbing-stairs-test 70-recursive-climbing-stairs-test.cpp)
+target_link_libraries(recursive-climbing-stairs-test gtest_main recursive-climbing-stairs)
+add_test(NAME recursive-climbing-stairs-test COMMAND recursive-climbing-stairs-test)
+
 add_executable(best-time-to-buy-and-sell-stock-test 121-best-time-to-buy-and-sell-stock-test.cpp)
 target_link_libraries(best-time-to-buy-and-sell-stock-test gtest_main best-time-to-buy-and-sell-stock)
 add_test(NAME best-time-to-buy-and-sell-stock-test COMMAND best-time-to-buy-and-sell-stock-test)
