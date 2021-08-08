@@ -15,7 +15,7 @@
  */
 
 #include <algorithm>
-#include <unordered_set>
+#include <set>
 #include <vector>
 
 namespace leetcode {
@@ -23,6 +23,7 @@ class ThreeSum {
   public:
   std::vector<std::vector<int>> threeSum(std::vector<int>& nums) {
     std::vector<std::vector<int>> triplets;
+    std::set<std::vector<int>> seen;
     if (nums.size() < 3) return triplets;
     std::sort(nums.begin(), nums.end()); // runs at O(nlogn)
     for (int i = 0; i < nums.size() - 2; i++) {
@@ -34,8 +35,9 @@ class ThreeSum {
         int c = nums[end];
         if (a + b + c == 0) {
           std::vector<int> candidate{a,b,c};
-          if (std::find(triplets.begin(), triplets.end(), candidate) == triplets.end()) {
+          if (seen.find(candidate) == seen.end()) {
             triplets.push_back(candidate);
+            seen.insert(candidate);
           }
           start = start + 1;
           end = end - 1;
