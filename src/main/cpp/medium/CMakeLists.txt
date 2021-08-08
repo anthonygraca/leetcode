@@ -22,3 +22,4 @@ add_library(product-of-array-except-self OBJECT 238-product-of-array-except-self
 add_library(sum-of-two-integers OBJECT 371-sum-of-two-integers.h)
 
 add_library(coin-change OBJECT 322-coin-change.h)
+add_library(recursive-coin-change OBJECT 322-recursive-coin-change.h)

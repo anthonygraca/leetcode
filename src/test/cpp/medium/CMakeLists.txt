@@ -45,3 +45,7 @@ add_test(NAME sum-of-two-integers-test COMMAND sum-of-two-integers-test)
 add_executable(coin-change-test 322-coin-change-test.cpp)
 target_link_libraries(coin-change-test gtest_main coin-change)
 add_test(NAME coin-change-test COMMAND coin-change-test)
+
+add_executable(recursive-coin-change-test 322-recursive-coin-change-test.cpp)
+target_link_libraries(recursive-coin-change-test gtest_main recursive-coin-change)
+add_test(NAME recursive-coin-change-test COMMAND recursive-coin-change-test)
