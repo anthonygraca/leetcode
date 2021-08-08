@@ -23,7 +23,7 @@ class ThreeSum {
   public:
   std::vector<std::vector<int>> threeSum(std::vector<int>& nums) {
     std::vector<std::vector<int>> triplets;
-    std::set<std::vector<int>> seen;
+    std::set<std::vector<int>> set;
     if (nums.size() < 3) return triplets;
     std::sort(nums.begin(), nums.end()); // runs at O(nlogn)
     for (int i = 0; i < nums.size() - 2; i++) {
@@ -34,11 +34,7 @@ class ThreeSum {
         int b = nums[start];
         int c = nums[end];
         if (a + b + c == 0) {
-          std::vector<int> candidate{a,b,c};
-          if (seen.find(candidate) == seen.end()) {
-            triplets.push_back(candidate);
-            seen.insert(candidate);
-          }
+          set.insert(std::vector<int>{a,b,c});
           start = start + 1;
           end = end - 1;
         }
@@ -50,6 +46,7 @@ class ThreeSum {
         }
       }
     }
+    triplets.assign(set.begin(), set.end());
     return triplets;
   }
 };
