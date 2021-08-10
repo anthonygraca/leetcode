@@ -22,6 +22,8 @@ TEST(ThreeSum, ThirdExample) {
   std::vector<std::vector<int>> expected{};
   ASSERT_EQ(expected, solution.threeSum(nums));
 }
+
+/*
 TEST(ThreeSum, FourthExample) {
   std::vector<int> nums={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
                          0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -157,6 +159,7 @@ TEST(ThreeSum, FourthExample) {
   std::vector<std::vector<int>> expected{{-1, 0, 1}, {0, 0, 0}};
   ASSERT_EQ(expected, solution.threeSum(nums));
 }
+*/
 
 TEST(ThreeSum, FifthExample) {
   std::vector<int> nums={-2,0,1,1,2};
