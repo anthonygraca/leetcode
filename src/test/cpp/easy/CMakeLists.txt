@@ -30,6 +30,10 @@ add_executable(contains-duplicate-test 217-contains-duplicate-test.cpp)
 target_link_libraries(contains-duplicate-test gtest_main contains-duplicate)
 add_test(NAME contains-duplicate-test COMMAND contains-duplicate-test)
 
+add_executable(invert-binary-tree-test 226-invert-binary-tree-test.cpp)
+target_link_libraries(invert-binary-tree-test gtest_main invert-binary-tree)
+add_test(NAME invert-binary-tree-test COMMAND invert-binary-tree-test)
+
 add_executable(counting-bits-test  338-counting-bits-test.cpp)
 target_link_libraries(counting-bits-test gtest_main counting-bits)
 add_test(NAME counting-bits-test COMMAND counting-bits-test)
