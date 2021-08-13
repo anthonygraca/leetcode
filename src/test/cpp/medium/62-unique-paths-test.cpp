@@ -10,6 +10,14 @@ TEST(UniquePaths, FirstExample) {
   ASSERT_EQ(expected, solution.unique_paths(m, n));
 }
 
+/*
+ * Explanation:
+ * From the top-left corner, there are a total of 3 ways to reach the 
+ * bottom-right corner:
+    1. Right -> Down -> Down
+    2. Down -> Down -> Right
+    3. Down -> Right -> Down
+ */
 TEST(UniquePaths, SecondExample) {
   int m{3}; 
   int n{2};
