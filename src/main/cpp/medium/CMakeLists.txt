@@ -12,6 +12,8 @@ add_library(letter-combinations-of-a-phone-number OBJECT 17-letter-combinations-
 
 add_library(search-in-rotated-sorted-array OBJECT 33-search-in-rotated-sorted-array.h)
 
+add_library(unique-paths OBJECT 62-unique-paths.h)
+
 add_library(maximum-product-subarray OBJECT 152-maximum-product-subarray.h)
 
 add_library(find-minimum-in-rotated-sorted-array OBJECT 153-find-minimum-in-rotated-sorted-array.h)

@@ -11,5 +11,6 @@ TEST(InvertBinaryTree, FirstExample) {
   leetcode::TreeNode right_parent(7, &right_left_leaf, &right_right_leaf);
   leetcode::TreeNode root(4, &left_parent, &right_parent);
   leetcode::InvertBinaryTree solution;
+
 }
 

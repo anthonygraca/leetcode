@@ -22,6 +22,10 @@ add_executable(search-in-rotated-sorted-array-test 33-search-in-rotated-sorted-a
 target_link_libraries(search-in-rotated-sorted-array-test gtest_main search-in-rotated-sorted-array)
 add_test(NAME search-in-rotated-sorted-array-test COMMAND search-in-rotated-sorted-array-test)
 
+add_executable(unique-paths-test 62-unique-paths-test.cpp)
+target_link_libraries(unique-paths-test gtest_main unique-paths)
+add_test(NAME unique-paths-test COMMAND unique-paths-test)
+
 add_executable(maximum-product-subarray-test 152-maximum-product-subarray-test.cpp)
 target_link_libraries(maximum-product-subarray-test gtest_main maximum-product-subarray)
 add_test(NAME maximum-product-subarray-test COMMAND maximum-product-subarray-test)
