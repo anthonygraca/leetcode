@@ -9,10 +9,31 @@
  * • -1000 <= a, b <= 1000
  */
 
+/*
+ * We are building a full adder.
+ *
+ *                                  -----------
+ * A half-adder has the truth table:  | 0 | 1 |
+ *    *This is an XOR               -----------
+ *                                  0 | 0 | 1 |
+ *                                  -----------
+ *                                  1 | 1 | 0 |
+ *                                  -----------
+ *
+ * To handle the carry, we need a truth table like: -------------
+ *    *THis is an AND                               |   | 0 | 1 |
+ *                                                  -------------
+ *                                                  | 0 | 0 | 0 |
+ *                                                  -------------
+ *                                                  | 1 | 0 | 1 |
+ *                                                  -------------
+ */
+
 namespace leetcode {
 class SumOfTwoIntegers {
   public:
     int getSum(int a, int b) {
+      int result = a^b; // caret is the symbol for xor
       return 3;
     }
 };
