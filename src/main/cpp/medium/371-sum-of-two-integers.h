@@ -33,8 +33,15 @@ namespace leetcode {
 class SumOfTwoIntegers {
   public:
     int getSum(int a, int b) {
-      int result = a^b; // caret is the symbol for xor
-      return 3;
+      int half_adder = a ^ b; // caret is the symbol for xor
+      int carry = a & b;
+      int temp = 0;
+      while (carry > 0) {
+        temp = half_adder ^ (carry << 1);
+        carry = half_adder & (carry << 1);
+        half_adder = temp;
+      }
+      return half_adder;
     }
 };
 } // namespace leetcode
