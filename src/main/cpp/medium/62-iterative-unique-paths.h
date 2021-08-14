@@ -24,18 +24,19 @@ class IterativeUniquePaths {
   public:
     int unique_paths(int m, int n) {
       if (m == 1 || n == 1) return 1;
-      std::vector<std::vector<int>> found(m+1, std::vector<int>(n+1, -1));
-      found[1][1] = 0;
-      found[1][2] = 1;
-      found[2][1] = 1;
-      return unique_paths(m, n, found);
-    }
-
-    int unique_paths(int m, int n, std::vector<std::vector<int>>& found) {
-      if (m == 1 || n == 1) return 1;
-      if (found[m][n] != -1) return found[m][n];
-      found[m][n] = unique_paths(m-1, n, found) + unique_paths(m, n-1, found);
-      return found[m][n];
+      std::vector<std::vector<int>> found(m, std::vector<int>(n, -1));
+      for (int i = 0; i < m; i++) {
+        found[i][0] = 1;
+      }
+      for (int i = 0; i < n; i++) {
+        found[0][i] = 1;
+      }
+      for (int i = 1; i < m; i++) {
+        for (int j = 1; j < n; j++) {
+          found[i][j] = found[i-1][j] + found[i][j-1];
+        }
+      }
+      return found[m-1][n-1];
     }
 };
 } // namespace leetcode
