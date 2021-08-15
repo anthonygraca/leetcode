@@ -17,3 +17,11 @@ TEST(SumOfTwoIntegers, SecondExample) {
   int expected{5};
   ASSERT_EQ(expected, solution.getSum(a,b));
 }
+
+TEST(SumOfTwoIntegers, ThirdExample) {
+  int a{-12};
+  int b{-8};
+  leetcode::SumOfTwoIntegers solution;
+  int expected{-20};
+  ASSERT_EQ(expected, solution.getSum(a,b));
+}

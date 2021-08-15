@@ -36,6 +36,7 @@ class SumOfTwoIntegers {
       int half_adder = a ^ b; // caret is the symbol for xor
       int carry = a & b;
       int temp = 0;
+      int count = 0;
       while (carry > 0) {
         temp = half_adder ^ (carry << 1);
         carry = half_adder & (carry << 1);
