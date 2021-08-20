@@ -29,18 +29,18 @@
  *                                                  -------------
  */
 
+#include <cstdint>
+
 namespace leetcode {
 class SumOfTwoIntegers {
   public:
-    int getSum(int a, int b) {
-      int half_adder = a ^ b; // caret is the symbol for xor
-      int carry = a & b;
-      int temp = 0;
-      int count = 0;
+    uint32_t getSum(uint32_t a, uint32_t b) {
+      uint32_t half_adder = a ^ b; // caret is the symbol for xor
+      uint32_t carry = ((a & b) & 0x7FFFFFFF) << 1;
       while (carry > 0) {
-        temp = half_adder ^ (carry << 1);
-        carry = half_adder & (carry << 1);
-        half_adder = temp;
+        uint32_t temp = half_adder;
+        half_adder = temp ^ carry;
+        carry = ((temp & carry) & 0x7FFFFFF) << 1;
       }
       return half_adder;
     }
