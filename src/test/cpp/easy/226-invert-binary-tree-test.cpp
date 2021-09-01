@@ -32,3 +32,8 @@ TEST(InvertBinaryTree, SecondExample) {
   ASSERT_EQ(expected_inorder, inorder(solution.invertTree(&root)));
 }
 
+TEST(InvertBinaryTree, ThirdExample) {
+  leetcode::InvertBinaryTree solution;
+  ASSERT_EQ(nullptr, solution.invertTree(nullptr));
+}
+
