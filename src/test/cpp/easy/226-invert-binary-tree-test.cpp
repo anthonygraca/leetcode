@@ -21,7 +21,14 @@ TEST(InvertBinaryTree, FirstExample) {
   leetcode::InvertBinaryTree solution;
   std::string expected_inorder{"9 7 6 4 3 2 1 "};
   ASSERT_EQ(expected_inorder, inorder(solution.invertTree(&root)));
+}
 
-
+TEST(InvertBinaryTree, SecondExample) {
+  leetcode::TreeNode left_leaf(1);
+  leetcode::TreeNode right_leaf(3);
+  leetcode::TreeNode root(2, &left_leaf, &right_leaf);
+  leetcode::InvertBinaryTree solution;
+  std::string expected_inorder{"3 2 1 "};
+  ASSERT_EQ(expected_inorder, inorder(solution.invertTree(&root)));
 }
 
