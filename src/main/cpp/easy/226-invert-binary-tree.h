@@ -17,6 +17,7 @@ struct TreeNode {
 class InvertBinaryTree {
   public:
     TreeNode* invertTree(TreeNode* root) {
+      if (root == nullptr) return root;
       return postorder(root);
     }
   TreeNode* postorder(TreeNode* root) {
