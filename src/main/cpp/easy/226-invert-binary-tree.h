@@ -27,21 +27,10 @@ class InvertBinaryTree {
     return root;
   }
   TreeNode* swapChildren(TreeNode* root) {
-    if (root->left == nullptr && root->right == nullptr) return root;
-    else if (root->right == nullptr) {
-      root->right = root->left;
-      root->left = nullptr;
-    }
-    else if (root->left == nullptr) {
-      root->left = root->right;
-      root->right = nullptr;
-    }
-    else {  //if (root->left != nullptr && root->right != nullptr) 
       auto temp = root->left;
       root->left = root->right;
       root->right = temp;
-    }
-    return root;
+      return root;
   }
 };
 } // namespace leetcode
