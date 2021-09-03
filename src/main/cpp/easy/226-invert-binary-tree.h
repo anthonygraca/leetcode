@@ -18,6 +18,15 @@ class InvertBinaryTree {
   public:
     TreeNode* invertTree(TreeNode* root) {
       if (root == nullptr) return root;
+      TreeNode* left = invertTree(root->left);
+      TreeNode* right = invertTree(root->right);
+      root->left = right;
+      root->right = left;
+      return root;
+    }
+    /*
+    TreeNode* invertTree(TreeNode* root) {
+      if (root == nullptr) return root;
       return postorder(root);
     }
   TreeNode* postorder(TreeNode* root) {
@@ -32,6 +41,7 @@ class InvertBinaryTree {
       root->right = temp;
       return root;
   }
+  */
 };
 } // namespace leetcode
 
