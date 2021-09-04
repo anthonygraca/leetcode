@@ -36,4 +36,3 @@ TEST(InvertBinaryTree, ThirdExample) {
   leetcode::InvertBinaryTree solution;
   ASSERT_EQ(nullptr, solution.invertTree(nullptr));
 }
-

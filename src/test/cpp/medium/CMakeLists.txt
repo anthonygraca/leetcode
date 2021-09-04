@@ -22,6 +22,10 @@ add_executable(search-in-rotated-sorted-array-test 33-search-in-rotated-sorted-a
 target_link_libraries(search-in-rotated-sorted-array-test gtest_main search-in-rotated-sorted-array)
 add_test(NAME search-in-rotated-sorted-array-test COMMAND search-in-rotated-sorted-array-test)
 
+add_executable(insert-interval-test 57-insert-interval-test.cpp)
+target_link_libraries(insert-interval-test gtest_main insert-interval)
+add_test(NAME insert-interval-test COMMAND insert-interval-test)
+
 add_executable(unique-paths-test 62-unique-paths-test.cpp)
 target_link_libraries(unique-paths-test gtest_main unique-paths)
 add_test(NAME unique-paths-test COMMAND unique-paths-test)
