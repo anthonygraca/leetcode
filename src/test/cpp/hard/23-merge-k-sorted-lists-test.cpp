@@ -11,9 +11,11 @@ TEST(MergeKSortedLists, FirstExample) {
   input.push_back(leetcode::getLinkedListForm({2,6}));
   leetcode::MergeKSortedLists solution;
   leetcode::ListNode* expected = leetcode::getLinkedListForm({1,1,2,3,4,4,5,6});
-  ASSERT_TRUE(leetcode::isEqual(expected, solution.mergeKLists(input)));
+  leetcode::ListNode* output = solution.mergeKLists(input);
+  ASSERT_TRUE(leetcode::isEqual(expected, output));
   leetcode::releaseNodes(expected);
   for(auto i : input) {
     leetcode::releaseNodes(i);
   }
+  leetcode::releaseNodes(output);
 }
