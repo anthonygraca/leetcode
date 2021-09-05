@@ -1,2 +1,5 @@
 add_library(median-of-two-sorted-arrays OBJECT
             4-median-of-two-sorted-arrays.h)
+
+add_library(merge-k-sorted-lists OBJECT
+            23-merge-k-sorted-lists.h)

@@ -1,3 +1,7 @@
 add_executable(median-of-two-sorted-arrays-test 4-median-of-two-sorted-arrays-test.cpp)
 target_link_libraries(median-of-two-sorted-arrays-test gtest_main median-of-two-sorted-arrays)
 add_test(NAME median-of-two-sorted-arrays-test COMMAND median-of-two-sorted-arrays-test)
+
+add_executable(merge-k-sorted-lists-test 23-merge-k-sorted-lists-test.cpp)
+target_link_libraries(merge-k-sorted-lists-test gtest_main merge-k-sorted-lists)
+add_test(NAME merge-k-sorted-lists-test COMMAND merge-k-sorted-lists-test)
