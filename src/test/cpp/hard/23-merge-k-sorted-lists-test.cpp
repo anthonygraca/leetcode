@@ -25,7 +25,34 @@ TEST_F(MergeKSortedLists, FirstExample) {
   input.push_back(leetcode::getLinkedListForm({1,3,4}));
   input.push_back(leetcode::getLinkedListForm({2,6}));
   leetcode::MergeKSortedLists solution;
-  expected = leetcode::getLinkedListForm({1,1,2,3,4,4,5,6});
+  //expected = leetcode::getLinkedListForm({1,1,2,3,4,4,5,6});
+  output = solution.mergeKLists(input);
+  ASSERT_TRUE(leetcode::isEqual(expected, output));
+}
+
+TEST_F(MergeKSortedLists, SecondExample) {
+  input.push_back(leetcode::getLinkedListForm({1}));
+  input.push_back(leetcode::getLinkedListForm({2}));
+  input.push_back(leetcode::getLinkedListForm({3}));
+  leetcode::MergeKSortedLists solution;
+  expected = leetcode::getLinkedListForm({1,2,3});
+  output = solution.mergeKLists(input);
+  ASSERT_TRUE(leetcode::isEqual(expected, output));
+}
+
+TEST_F(MergeKSortedLists, ThirdExample) {
+  input.push_back(leetcode::getLinkedListForm({1}));
+  input.push_back(leetcode::getLinkedListForm({2}));
+  leetcode::MergeKSortedLists solution;
+  expected = leetcode::getLinkedListForm({1,2});
+  output = solution.mergeKLists(input);
+  ASSERT_TRUE(leetcode::isEqual(expected, output));
+}
+
+TEST_F(MergeKSortedLists, FourthExample) {
+  input.push_back(leetcode::getLinkedListForm({1}));
+  leetcode::MergeKSortedLists solution;
+  expected = leetcode::getLinkedListForm({1});
   output = solution.mergeKLists(input);
   ASSERT_TRUE(leetcode::isEqual(expected, output));
 }
