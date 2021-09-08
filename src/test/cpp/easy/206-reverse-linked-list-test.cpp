@@ -21,3 +21,10 @@ TEST(ReverseLinkedList, DISABLED_SecondExample) {
   leetcode::releaseNodes(input);
   leetcode::releaseNodes(expected);
 }
+
+TEST(ReverseLinkedList, ThirdExample) {
+  leetcode::ListNode* input = nullptr;
+  leetcode::ReverseLinkedList solution;
+  leetcode::ListNode* expected = nullptr;
+  ASSERT_TRUE(leetcode::isEqual(solution.reverseList(input), expected));
+}

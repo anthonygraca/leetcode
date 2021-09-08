@@ -3,10 +3,15 @@
 
 #include "util/list-node.h"
 
+
+
 namespace leetcode {
 class ReverseLinkedList {
   public:
     ListNode* reverseList(ListNode* head) {
+      if (head == nullptr || head->next == nullptr) {
+        return head;
+      }
       ListNode* answer = nullptr;
       answer = new ListNode(1, answer);
       answer = new ListNode(2, answer);
