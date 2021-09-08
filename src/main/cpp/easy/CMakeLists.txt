@@ -12,6 +12,8 @@ add_library(best-time-to-buy-and-sell-stock OBJECT
 
 add_library(number-of-1-bits OBJECT 191-number-of-1-bits.h)
 
+add_library(reverse-linked-list OBJECT 206-reverse-linked-list.h)
+
 add_library(contains-duplicate OBJECT 217-contains-duplicate.h)
 
 add_library(invert-binary-tree OBJECT 226-invert-binary-tree.h)

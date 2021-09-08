@@ -26,6 +26,10 @@ add_executable(number-of-1-bits-test 191-number-of-1-bits-test.cpp)
 target_link_libraries(number-of-1-bits-test gtest_main number-of-1-bits)
 add_test(NAME number-of-1-bits-test COMMAND number-of-1-bits-test)
 
+add_executable(reverse-linked-list-test 206-reverse-linked-list-test.cpp)
+target_link_libraries(reverse-linked-list-test gtest_main reverse-linked-list)
+add_test(NAME reverse-linked-list-test COMMAND reverse-linked-list-test)
+
 add_executable(contains-duplicate-test 217-contains-duplicate-test.cpp)
 target_link_libraries(contains-duplicate-test gtest_main contains-duplicate)
 add_test(NAME contains-duplicate-test COMMAND contains-duplicate-test)
