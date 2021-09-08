@@ -3,8 +3,6 @@
 
 #include "util/list-node.h"
 
-
-
 namespace leetcode {
 class ReverseLinkedList {
   public:
@@ -12,15 +10,17 @@ class ReverseLinkedList {
       if (head == nullptr || head->next == nullptr) {
         return head;
       }
-      ListNode* answer = nullptr;
-      answer = new ListNode(1, answer);
-      answer = new ListNode(2, answer);
-      answer = new ListNode(3, answer);
-      answer = new ListNode(4, answer);
-      answer = new ListNode(5, answer);
-      return answer;
+      ListNode* current = head;
+      ListNode* prev = nullptr;
+      ListNode* next = nullptr;
+      while (current != nullptr) {
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+      }
+      return prev;
     }
-    
 };
 } // namespace leetcode
 #endif

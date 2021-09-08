@@ -13,7 +13,7 @@ TEST(ReverseLinkedList, FirstExample) {
   leetcode::releaseNodes(expected);
 }
 
-TEST(ReverseLinkedList, DISABLED_SecondExample) {
+TEST(ReverseLinkedList, SecondExample) {
   leetcode::ListNode* input = leetcode::getLinkedListForm({1,2});
   leetcode::ReverseLinkedList solution;
   leetcode::ListNode* expected = leetcode::getLinkedListForm({2,1});
