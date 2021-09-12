@@ -46,6 +46,10 @@ add_executable(recursive-find-minimum-in-rotated-sorted-array-test 153-recursive
 target_link_libraries(recursive-find-minimum-in-rotated-sorted-array-test gtest_main recursive-find-minimum-in-rotated-sorted-array)
 add_test(NAME recursive-find-minimum-in-rotated-sorted-array-test COMMAND recursive-find-minimum-in-rotated-sorted-array-test)
 
+add_executable(number-of-islands-test 200-number-of-islands-test.cpp)
+target_link_libraries(number-of-islands-test gtest_main number-of-islands)
+add_test(NAME number-of-islands-test COMMAND number-of-islands-test)
+
 add_executable(product-of-array-except-self-test 238-product-of-array-except-self-test.cpp)
 target_link_libraries(product-of-array-except-self-test gtest_main product-of-array-except-self)
 add_test(NAME product-of-array-except-self-test COMMAND product-of-array-except-self-test)
