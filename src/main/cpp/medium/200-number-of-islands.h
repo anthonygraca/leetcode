@@ -11,8 +11,8 @@
 
 
     Constraints:
-     * m == grid.length
-     * n == grid[i].length
+     * m == grid.size()
+     * n == grid[i].size()
      * 1 <= m, n <= 300
      * grid[i][j] is '0' or '1'.
  */
@@ -23,6 +23,10 @@ namespace leetcode {
 class NumberOfIslands {
   public:
     int numIslands(std::vector<std::vector<char>>& grid) {
+      for (int m = 0; m < grid.size(); m++) {
+        for (int n = 0; n < grid[0].size(); n++) {
+        }
+      }
       return 1;
     }
 };
