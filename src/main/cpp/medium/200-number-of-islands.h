@@ -23,11 +23,18 @@ namespace leetcode {
 class NumberOfIslands {
   public:
     int numIslands(std::vector<std::vector<char>>& grid) {
+      int count = 0;
       for (int m = 0; m < grid.size(); m++) {
         for (int n = 0; n < grid[0].size(); n++) {
+          if (grid[m][n] == '1') {
+            dfs(grid, m, n);
+            count++;
+          }
         }
       }
       return 1;
+    }
+    void dfs(std::vector<std::vector<char>>& grid, int m, int n) {
     }
 };
 } // namespace leetcode
