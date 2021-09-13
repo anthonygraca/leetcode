@@ -34,6 +34,7 @@ class NumberOfIslands {
       }
       return count;
     }
+  private:
     void dfs(std::vector<std::vector<char>>& grid, int m, int n) {
       if (grid[m][n] == '1') {
         grid[m][n] = '0';
