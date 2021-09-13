@@ -32,9 +32,24 @@ class NumberOfIslands {
           }
         }
       }
-      return 1;
+      return count;
     }
     void dfs(std::vector<std::vector<char>>& grid, int m, int n) {
+      if (grid[m][n] == '1') {
+        grid[m][n] = '0';
+        if (m > 0) {
+          dfs(grid, m-1, n);
+        }
+        if (m < grid.size() - 1) {
+          dfs(grid, m+1, n);
+        }
+        if (n > 0) {
+          dfs(grid, m, n-1);
+        }
+        if (n < grid[0].size() - 1) {
+          dfs(grid, m, n+1);
+        }
+      }
     }
 };
 } // namespace leetcode
