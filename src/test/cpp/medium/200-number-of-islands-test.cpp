@@ -12,7 +12,7 @@ TEST(NumberOfIslands, FirstExample) {
   ASSERT_EQ(expected, solution.numIslands(input));
 }
 
-TEST(NumberOfIslands, DISABLED_SecondExample) {
+TEST(NumberOfIslands, SecondExample) {
   std::vector<std::vector<char>> input = {{'1','1','0','0','0'},
                                           {'1','1','0','0','0'},
                                           {'0','0','1','0','0'},
