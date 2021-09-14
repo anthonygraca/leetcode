@@ -2,6 +2,8 @@
 
 #include "gtest/gtest.h"
 
+#include "util/tree-node.h"
+
 std::string inorder(leetcode::TreeNode* root) {
   std::string result{""};
   if (root->left != nullptr) result += inorder(root->left);
@@ -9,6 +11,15 @@ std::string inorder(leetcode::TreeNode* root) {
   if (root->right != nullptr) result += inorder(root->right);
   return result;
 }
+
+/*
+ * Input Tree:
+ *             4
+ *          /     \
+ *        2         7
+ *     /     \/  /     \
+ *    1       3 6       9
+ */
 
 TEST(InvertBinaryTree, FirstExample) {
   leetcode::TreeNode left_left_leaf(1);
@@ -23,6 +34,12 @@ TEST(InvertBinaryTree, FirstExample) {
   ASSERT_EQ(expected_inorder, inorder(solution.invertTree(&root)));
 }
 
+/*
+ * Input Tree:
+ *      2
+ *   /     \
+ * 1         3
+ */
 TEST(InvertBinaryTree, SecondExample) {
   leetcode::TreeNode left_leaf(1);
   leetcode::TreeNode right_leaf(3);
