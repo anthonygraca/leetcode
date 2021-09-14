@@ -9,3 +9,7 @@ add_test(NAME merge-k-sorted-lists-test COMMAND merge-k-sorted-lists-test)
 add_executable(binary-tree-maximum-path-sum-test 124-binary-tree-maximum-path-sum-test.cpp)
 target_link_libraries(binary-tree-maximum-path-sum-test gtest_main binary-tree-maximum-path-sum)
 add_test(NAME binary-tree-maximum-path-sum-test COMMAND binary-tree-maximum-path-sum-test)
+
+add_executable(serialize-and-deserialize-binary-tree-test 297-serialize-and-deserialize-binary-tree-test.cpp)
+target_link_libraries(serialize-and-deserialize-binary-tree-test gtest_main serialize-and-deserialize-binary-tree)
+add_test(NAME serialize-and-deserialize-binary-tree-test COMMAND serialize-and-deserialize-binary-tree-test)
