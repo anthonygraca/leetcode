@@ -20,7 +20,6 @@ std::string inorder(leetcode::TreeNode* root) {
  *     /     \/  /     \
  *    1       3 6       9
  */
-
 TEST(InvertBinaryTree, FirstExample) {
   leetcode::TreeNode left_left_leaf(1);
   leetcode::TreeNode left_right_leaf(3);
