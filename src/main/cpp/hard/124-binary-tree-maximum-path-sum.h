@@ -16,16 +16,31 @@
   Constraints:
   * The number of nodes in the tree is in the range [1, 3 * 10^4].
   * -1000 <= Node.val <= 1000
-
  */
 
 #include "util/tree-node.h"
+
+#include <algorithm>
+#include <limits>
 
 namespace leetcode {
 class BinaryTreeMaximumPathSum {
   public:
     int maxPathSum(const leetcode::TreeNode* root) {
-      return 6;
+      if (root == nullptr) {
+        return 0;
+      }
+      postorder(root);
+      return max_sum;
+    }
+  private:
+    int max_sum = std::numeric_limits<int>::min();
+    int postorder(const leetcode::TreeNode* root) {
+      if (root == nullptr) return 0;
+      int left = std::max(postorder(root->left), 0);
+      int right = std::max(postorder(root->right), 0);
+      max_sum = std::max(root->val + left + right, max_sum);
+      return root->val + std::max(left,right);
     }
 };
 } // namespace leetcode
