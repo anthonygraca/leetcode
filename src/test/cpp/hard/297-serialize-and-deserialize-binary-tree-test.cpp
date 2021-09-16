@@ -33,8 +33,7 @@ TEST(SerializeAndDeserializeBinaryTree, SecondExampleSerialize) {
 
 TEST(SerializeAndDeserializeBinaryTree, SecondExampleDeserialize) {
   leetcode::SerializeAndDeserializeBinaryTree solution;
-  std::string expected{""};
-  ASSERT_EQ(expected, solution.serialize(nullptr));
+  ASSERT_EQ(nullptr, solution.deserialize(""));
 }
 
 TEST(SerializeAndDeserializeBinaryTree, ThirdExampleSerialize) {
