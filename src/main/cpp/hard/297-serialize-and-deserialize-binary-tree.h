@@ -34,19 +34,14 @@ class SerializeAndDeserializeBinaryTree {
       if (root == nullptr) {
         return "";
       }
-      //return preorder(root);
-      std::string expected{"1,2,3,null,null,4,5"};
-      return expected;
+      return preorder(root);
     }
     std::string preorder(leetcode::TreeNode* root) {
       std::string output{""};
       if (root != nullptr) {
-        output += std::to_string(root->val) + ",";
+        output += std::to_string(root->val);
         output += preorder(root->left);
         output += preorder(root->right);
-      }
-      else {
-        output += "null";
       }
       return output;
     }

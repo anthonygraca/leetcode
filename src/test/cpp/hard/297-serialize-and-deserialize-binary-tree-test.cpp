@@ -12,6 +12,7 @@
  *             /     \
  *            4       5
  */
+/*
 TEST(SerializeAndDeserializeBinaryTree, FirstExampleSerialize) {
   leetcode::TreeNode deepest_left_child(4);
   leetcode::TreeNode deepest_right_child(5);
@@ -22,6 +23,7 @@ TEST(SerializeAndDeserializeBinaryTree, FirstExampleSerialize) {
   std::string expected{"1,2,3,null,null,4,5"};
   ASSERT_EQ(expected, solution.serialize(&root));
 }
+*/
 
 TEST(SerializeAndDeserializeBinaryTree, SecondExampleSerialize) {
   leetcode::SerializeAndDeserializeBinaryTree solution;
@@ -35,14 +37,12 @@ TEST(SerializeAndDeserializeBinaryTree, SecondExampleDeserialize) {
   ASSERT_EQ(expected, solution.serialize(nullptr));
 }
 
-/*
 TEST(SerializeAndDeserializeBinaryTree, ThirdExampleSerialize) {
   leetcode::TreeNode root(1);
   leetcode::SerializeAndDeserializeBinaryTree solution;
   std::string expected{"1"};
   ASSERT_EQ(expected, solution.serialize(&root));
 }
-*/
 
 /*
 TEST(SerializeAndDeserializeBinaryTree, FourthExampleSerialize) {
