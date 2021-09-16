@@ -28,13 +28,12 @@ TEST(SerializeAndDeserializeBinaryTree, SecondExampleSerialize) {
   std::string expected{""};
   ASSERT_EQ(expected, solution.serialize(nullptr));
 }
-/*
+
 TEST(SerializeAndDeserializeBinaryTree, SecondExampleDeserialize) {
   leetcode::SerializeAndDeserializeBinaryTree solution;
   std::string expected{""};
   ASSERT_EQ(expected, solution.serialize(nullptr));
 }
-*/
 
 /*
 TEST(SerializeAndDeserializeBinaryTree, ThirdExampleSerialize) {
