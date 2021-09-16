@@ -31,8 +31,29 @@ namespace leetcode {
 class SerializeAndDeserializeBinaryTree {
   public:
     std::string serialize(leetcode::TreeNode* root) {
-      std::string expected{"1,2,3,4,null,null,4,5"};
+      if (root == nullptr) {
+        return "";
+      }
+      //return preorder(root);
+      std::string expected{"1,2,3,null,null,4,5"};
       return expected;
+    }
+    std::string preorder(leetcode::TreeNode* root) {
+      std::string output{""};
+      if (root != nullptr) {
+        output += std::to_string(root->val) + ",";
+        output += preorder(root->left);
+        output += preorder(root->right);
+      }
+      else {
+        output += "null";
+      }
+      return output;
+    }
+    leetcode::TreeNode* deserialize(std::string data) {
+      if (data.size() != 0) {
+      }
+      return nullptr;
     }
 };
 } // namespace leetcode

@@ -19,12 +19,17 @@ TEST(SerializeAndDeserializeBinaryTree, FirstExampleSerialize) {
   leetcode::TreeNode left_child(2);
   leetcode::TreeNode root(1, &left_child, &right_child);
   leetcode::SerializeAndDeserializeBinaryTree solution;
-  std::string expected{"1,2,3,4,null,null,4,5"};
+  std::string expected{"1,2,3,null,null,4,5"};
   ASSERT_EQ(expected, solution.serialize(&root));
 }
 
-/*
 TEST(SerializeAndDeserializeBinaryTree, SecondExampleSerialize) {
+  leetcode::SerializeAndDeserializeBinaryTree solution;
+  std::string expected{""};
+  ASSERT_EQ(expected, solution.serialize(nullptr));
+}
+/*
+TEST(SerializeAndDeserializeBinaryTree, SecondExampleDeserialize) {
   leetcode::SerializeAndDeserializeBinaryTree solution;
   std::string expected{""};
   ASSERT_EQ(expected, solution.serialize(nullptr));
