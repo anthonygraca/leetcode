@@ -43,6 +43,12 @@ TEST(SerializeAndDeserializeBinaryTree, ThirdExampleSerialize) {
   ASSERT_EQ(expected, solution.serialize(&root));
 }
 
+TEST(SerializeAndDeserializeBinaryTree, ThirdExampleDeserialize) {
+  leetcode::SerializeAndDeserializeBinaryTree solution;
+  std::string expected{"1"};
+  ASSERT_EQ(expected, solution.serialize(solution.deserialize("1")));
+}
+
 /*
 TEST(SerializeAndDeserializeBinaryTree, FourthExampleSerialize) {
   leetcode::TreeNode left_child(2);

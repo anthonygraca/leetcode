@@ -46,9 +46,13 @@ class SerializeAndDeserializeBinaryTree {
       return output;
     }
     leetcode::TreeNode* deserialize(std::string data) {
+      leetcode::TreeNode* result{nullptr};
       if (data.size() != 0) {
+        for (auto node : data) {
+          result = new leetcode::TreeNode(node-48);
+        }
       }
-      return nullptr;
+      return result;
     }
 };
 } // namespace leetcode
