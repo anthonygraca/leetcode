@@ -26,20 +26,17 @@ namespace leetcode {
 class TwoSum {
   public:
   std::vector<int> twoSum(std::vector<int> nums, int target) {
-    std::vector<int> answer;
     std::unordered_map<int, int> map;
     for (int i = 0; i < nums.size(); i++) {
       int desired_num = target - nums[i];
       if (map.find(desired_num) == std::end(map)) {
-        map.insert(std::make_pair(nums[i], i));
+        map[nums[i]] = i;
       }
       else {
-        answer.push_back(map.find(desired_num)->second);
-        answer.push_back(i);
-        return answer;
+        return {map[desired_num], i};
       }
     }
-    return answer;
+    return {};
   };
 };
 } // namespace leetcode
