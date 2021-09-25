@@ -7,7 +7,10 @@ namespace leetcode {
 class MaximumDepthOfBinaryTree {
   public:
     int maxDepth(TreeNode* node) {
-      return 0;
+      if (node == nullptr) {
+        return 0;
+      }
+      return 1;
     }
 };
 } // namespace leetcode
