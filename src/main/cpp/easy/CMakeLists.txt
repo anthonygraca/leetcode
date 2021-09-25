@@ -7,8 +7,9 @@ add_library(maximum-subarray OBJECT 53-maximum-subarray.h)
 add_library(climbing-stairs OBJECT 70-climbing-stairs.h)
 add_library(recursive-climbing-stairs OBJECT 70-recursive-climbing-stairs.h)
 
-add_library(best-time-to-buy-and-sell-stock OBJECT
-            121-best-time-to-buy-and-sell-stock.h)
+add_library(maximum-depth-of-binary-tree OBJECT 104-maximum-depth-of-binary-tree.h)
+
+add_library(best-time-to-buy-and-sell-stock OBJECT 121-best-time-to-buy-and-sell-stock.h)
 
 add_library(number-of-1-bits OBJECT 191-number-of-1-bits.h)
 
