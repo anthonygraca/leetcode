@@ -38,3 +38,12 @@ TEST(MaximumDepthOfBinaryTree, SecondLevelExampleBalanced) {
   leetcode::MaximumDepthOfBinaryTree solution;
   ASSERT_EQ(2, solution.maxDepth(&node));
 }
+
+TEST(MaximumDepthOfBinaryTree, ThirdLevelExampleLeftLeaning) {
+  leetcode::TreeNode far_left_node{SOME_NUMBER};
+  leetcode::TreeNode left_node{SOME_NUMBER, &far_left_node, nullptr};
+  leetcode::TreeNode right_node{SOME_NUMBER};
+  leetcode::TreeNode node{SOME_NUMBER, &left_node, &right_node};
+  leetcode::MaximumDepthOfBinaryTree solution;
+  ASSERT_EQ(3, solution.maxDepth(&node));
+}
