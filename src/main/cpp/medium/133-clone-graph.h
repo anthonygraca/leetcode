@@ -21,5 +21,12 @@ public:
     this->neighbors = neighbors;
   }
 };
+
+class CloneGraph {
+public:
+  Node* cloneGraph(Node* node) {
+    return nullptr;
+  }
+};
 } // namespace leetcode
 #endif

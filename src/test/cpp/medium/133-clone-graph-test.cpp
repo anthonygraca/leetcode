@@ -15,6 +15,8 @@ TEST(CloneGraph, FirstExample) {
   c.neighbors.push_back(&d);
   d.neighbors.push_back(&a);
   d.neighbors.push_back(&c);
+  leetcode::CloneGraph solution;
+  solution.cloneGraph(&a);
 
 
 }
