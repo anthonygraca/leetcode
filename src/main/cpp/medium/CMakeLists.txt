@@ -17,6 +17,8 @@ add_library(insert-interval OBJECT 57-insert-interval.h)
 add_library(unique-paths OBJECT 62-unique-paths.h)
 add_library(iterative-unique-paths OBJECT 62-iterative-unique-paths.h)
 
+add_library(clone-graph OBJECT 133-clone-graph.h)
+
 add_library(maximum-product-subarray OBJECT 152-maximum-product-subarray.h)
 
 add_library(find-minimum-in-rotated-sorted-array OBJECT 153-find-minimum-in-rotated-sorted-array.h)

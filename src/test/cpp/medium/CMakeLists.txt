@@ -34,6 +34,10 @@ add_executable(iterative-unique-paths-test 62-iterative-unique-paths-test.cpp)
 target_link_libraries(iterative-unique-paths-test gtest_main iterative-unique-paths)
 add_test(NAME iterative-unique-paths-test COMMAND iterative-unique-paths-test)
 
+add_executable(clone-graph-test 133-clone-graph-test.cpp)
+target_link_libraries(clone-graph-test gtest_main clone-graph)
+add_test(NAME clone-graph-test COMMAND clone-graph-test)
+
 add_executable(maximum-product-subarray-test 152-maximum-product-subarray-test.cpp)
 target_link_libraries(maximum-product-subarray-test gtest_main maximum-product-subarray)
 add_test(NAME maximum-product-subarray-test COMMAND maximum-product-subarray-test)
