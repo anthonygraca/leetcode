@@ -6,7 +6,7 @@
 namespace leetcode {
 class CourseSchedule {
 public:
-  bool canFinish(int num_courses, std::vector<std::vector<int>> prerequisites) {
+  bool canFinish(int num_courses, std::vector<std::vector<int>>& prerequisites) {
     return true;
   }
 };
