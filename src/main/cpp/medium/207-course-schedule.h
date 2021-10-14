@@ -27,6 +27,19 @@ namespace leetcode {
 class CourseSchedule {
 public:
   bool canFinish(int num_courses, std::vector<std::vector<int>>& prerequisites) {
+    /* idea:
+     * prerequisites represents this is a directed graph from A->B
+     * This is actually a topological sort. 
+     *
+     * We need to first find if there are cycles because a topological sort 
+     * does not exist if there's a cycle.
+     *
+     * We need a graph data structure that returns all edges reversed
+     * because we are gonna perform a DFS and push all visited nodes on a stack.
+     * 
+     * Then we will perform a reversed DFS and see if the beginning node can 
+     * reach the last node
+     */
     return true;
   }
 };
