@@ -22,25 +22,80 @@
  */
 
 #include <vector>
+#include <unordered_set>
+#include <stack>
 
 namespace leetcode {
+class Graph {
+public:
+  Graph(int v) : m_vertices(v) {
+    for (int i = 0; i < v; i++) {
+      m_adjacency_list.push_back(std::unordered_set<int>());
+    }
+  }
+  int vertices() const { return m_vertices; };
+  int edges() const { return m_edges; };
+  void addEdge(int v, int w) {
+    m_adjacency_list[v].insert(w);
+    m_edges++;
+  }
+  std::unordered_set<int> adj(int v) const {
+    return m_adjacency_list[v];
+  }
+private:
+  int m_vertices=0;
+  int m_edges=0;
+  std::vector<std::unordered_set<int>> m_adjacency_list;
+};
 class CourseSchedule {
 public:
   bool canFinish(int num_courses, std::vector<std::vector<int>>& prerequisites) {
+    m_marked = std::vector<bool>(num_courses, false);
+    m_on_stack = std::vector<bool>(num_courses, false);
+    m_edge_to = std::vector<int>(num_courses, -1);
     /* idea:
-     * prerequisites represents this is a directed graph from A->B
-     * This is actually a topological sort. 
-     *
-     * We need to first find if there are cycles because a topological sort 
-     * does not exist if there's a cycle.
-     *
-     * We need a graph data structure that returns all edges reversed
-     * because we are gonna perform a DFS and push all visited nodes on a stack.
-     * 
-     * Then we will perform a reversed DFS and see if the beginning node can 
-     * reach the last node
+     * Find cycle. if there's a cycle, we can't complete
      */
-    return true;
+    Graph g = generateGraphRepresentation(num_courses, prerequisites);
+    return !hasCycle(g);
+  }
+  Graph generateGraphRepresentation(int num_courses, std::vector<std::vector<int>>& prerequisites) {
+    Graph g{num_courses};
+    for (auto pair : prerequisites) {
+      g.addEdge(pair[0], pair[1]);
+    }
+    return g;
+  }
+private:
+  std::vector<bool> m_marked;
+  std::vector<bool> m_on_stack;
+  std::vector<int> m_edge_to;
+  std::stack<int> m_cycle_path;
+  bool hasCycle(Graph& g) {
+    for (int i = 0; i < g.vertices(); i++) {
+      if (!m_marked[i]) dfs(g, i);
+    }
+    return !m_cycle_path.empty();
+  }
+  void dfs(Graph& g, int v) {
+    m_on_stack[v] = true;
+    m_marked[v] = true;
+    for (int w : g.adj(v)) {
+      if (!m_cycle_path.empty()) return;
+      else if (!m_marked[w]) {
+        m_edge_to[w] = v;
+        dfs(g, w);
+      }
+      else if (m_on_stack[w]) {
+        m_cycle_path = std::stack<int>();
+        for (int x = v; x != w; x = m_edge_to[x]) {
+          m_cycle_path.push(x);
+        }
+        m_cycle_path.push(w);
+        m_cycle_path.push(v);
+      }
+    }
+    m_on_stack[v] = false;
   }
 };
 } // namespace leetcode
