@@ -73,3 +73,7 @@ add_test(NAME coin-change-test COMMAND coin-change-test)
 add_executable(recursive-coin-change-test 322-recursive-coin-change-test.cpp)
 target_link_libraries(recursive-coin-change-test gtest_main recursive-coin-change)
 add_test(NAME recursive-coin-change-test COMMAND recursive-coin-change-test)
+
+add_executable(pacific-atlantic-water-flow-test 417-pacific-atlantic-water-flow-test.cpp)
+target_link_libraries(pacific-atlantic-water-flow-test gtest_main pacific-atlantic-water-flow)
+add_test(NAME pacific-atlantic-water-flow-test COMMAND pacific-atlantic-water-flow-test)
