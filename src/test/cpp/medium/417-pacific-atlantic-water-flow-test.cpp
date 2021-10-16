@@ -18,3 +18,15 @@ TEST(PacificAtlanticWaterFlow, FirstExample) {
   };
   ASSERT_EQ(expected, algo.pacificAtlantic(heights));
 }
+
+TEST(PacificAtlanticWaterFlow, DISABLED_SecondExample) {
+  std::vector<std::vector<int>> heights = {
+    {2,1},
+    {1,2}
+  };
+  leetcode::PacificAtlanticWaterFlow algo;
+  std::vector<std::vector<int>> expected = {
+    {0,0}, {0,1}, {1,0}, {1,1}
+  };
+  ASSERT_EQ(expected, algo.pacificAtlantic(heights));
+}
