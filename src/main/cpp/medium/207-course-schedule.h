@@ -47,15 +47,13 @@ private:
   int m_edges=0;
   std::vector<std::unordered_set<int>> m_adjacency_list;
 };
+
 class CourseSchedule {
 public:
   bool canFinish(int num_courses, std::vector<std::vector<int>>& prerequisites) {
     m_marked = std::vector<bool>(num_courses, false);
     m_on_stack = std::vector<bool>(num_courses, false);
     m_edge_to = std::vector<int>(num_courses, -1);
-    /* idea:
-     * Find cycle. if there's a cycle, we can't complete
-     */
     Graph g = generateGraphRepresentation(num_courses, prerequisites);
     return !hasCycle(g);
   }
@@ -67,11 +65,11 @@ public:
     return g;
   }
 private:
-  std::vector<bool> m_marked;
-  std::vector<bool> m_on_stack;
-  std::vector<int> m_edge_to;
-  std::stack<int> m_cycle_path;
-  bool hasCycle(Graph& g) {
+  std::vector<bool> m_marked;   // keeps track if we visited a node already 
+  std::vector<bool> m_on_stack; // keeps track if node exists in our cycle path
+  std::vector<int> m_edge_to;   // keeps track of child-parent relationship
+  std::stack<int> m_cycle_path; // stack that contains path of cycle
+  bool hasCycle(Graph& g) { // performs DFS and returns if we have cycle
     for (int i = 0; i < g.vertices(); i++) {
       if (!m_marked[i]) dfs(g, i);
     }
@@ -81,12 +79,12 @@ private:
     m_on_stack[v] = true;
     m_marked[v] = true;
     for (int w : g.adj(v)) {
-      if (!m_cycle_path.empty()) return;
-      else if (!m_marked[w]) {
+      if (!m_cycle_path.empty()) return; // already found cycle, gtfo
+      else if (!m_marked[w]) {  // normal dfs recursive subroutine
         m_edge_to[w] = v;
         dfs(g, w);
       }
-      else if (m_on_stack[w]) {
+      else if (m_on_stack[w]) { // we found a cycle, populate our stack
         m_cycle_path = std::stack<int>();
         for (int x = v; x != w; x = m_edge_to[x]) {
           m_cycle_path.push(x);

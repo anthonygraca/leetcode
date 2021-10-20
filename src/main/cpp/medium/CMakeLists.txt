@@ -12,6 +12,8 @@ add_library(letter-combinations-of-a-phone-number OBJECT 17-letter-combinations-
 
 add_library(search-in-rotated-sorted-array OBJECT 33-search-in-rotated-sorted-array.h)
 
+add_library(permutations OBJECT 46-permutations.h)
+
 add_library(insert-interval OBJECT 57-insert-interval.h)
 
 add_library(unique-paths OBJECT 62-unique-paths.h)

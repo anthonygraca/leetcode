@@ -22,6 +22,10 @@ add_executable(search-in-rotated-sorted-array-test 33-search-in-rotated-sorted-a
 target_link_libraries(search-in-rotated-sorted-array-test gtest_main search-in-rotated-sorted-array)
 add_test(NAME search-in-rotated-sorted-array-test COMMAND search-in-rotated-sorted-array-test)
 
+add_executable(permutations-test 46-permutations-test.cpp)
+target_link_libraries(permutations-test gtest_main permutations)
+add_test(NAME permutations-test COMMAND permutations-test)
+
 add_executable(insert-interval-test 57-insert-interval-test.cpp)
 target_link_libraries(insert-interval-test gtest_main insert-interval)
 add_test(NAME insert-interval-test COMMAND insert-interval-test)
