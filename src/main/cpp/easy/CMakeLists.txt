@@ -11,6 +11,8 @@ add_library(maximum-depth-of-binary-tree OBJECT 104-maximum-depth-of-binary-tree
 
 add_library(best-time-to-buy-and-sell-stock OBJECT 121-best-time-to-buy-and-sell-stock.h)
 
+add_library(linked-list-cycle OBJECT 141-linked-list-cycle.h)
+
 add_library(number-of-1-bits OBJECT 191-number-of-1-bits.h)
 
 add_library(reverse-linked-list OBJECT 206-reverse-linked-list.h)
