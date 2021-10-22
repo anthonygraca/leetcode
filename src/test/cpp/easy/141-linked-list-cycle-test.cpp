@@ -31,3 +31,12 @@ TEST(LinkedListCycle, ThirdExample) {
   leetcode::LinkedListCycle algo;
   ASSERT_FALSE(algo.hasCycle(&a));
 }
+
+TEST(LinkedListCycle, FourthExample) {
+  leetcode::ListNode a{1};
+  leetcode::ListNode b{2};
+  a.next = &b;
+  leetcode::LinkedListCycle algo;
+  ASSERT_FALSE(algo.hasCycle(&a));
+}
+
