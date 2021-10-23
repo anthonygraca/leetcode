@@ -46,6 +46,10 @@ add_executable(invert-binary-tree-test 226-invert-binary-tree-test.cpp)
 target_link_libraries(invert-binary-tree-test gtest_main invert-binary-tree)
 add_test(NAME invert-binary-tree-test COMMAND invert-binary-tree-test)
 
+add_executable(closest-binary-tree-value-test 270-closest-binary-tree-value-test.cpp)
+target_link_libraries(closest-binary-tree-value-test gtest_main closest-binary-tree-value)
+add_test(NAME closest-binary-tree-value-test COMMAND closest-binary-tree-value-test)
+
 add_executable(counting-bits-test  338-counting-bits-test.cpp)
 target_link_libraries(counting-bits-test gtest_main counting-bits)
 add_test(NAME counting-bits-test COMMAND counting-bits-test)

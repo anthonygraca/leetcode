@@ -21,5 +21,7 @@ add_library(contains-duplicate OBJECT 217-contains-duplicate.h)
 
 add_library(invert-binary-tree OBJECT 226-invert-binary-tree.h)
 
+add_library(closest-binary-tree-value OBJECT 270-closest-binary-tree-value.h)
+
 add_library(counting-bits OBJECT 338-counting-bits.h)
 
