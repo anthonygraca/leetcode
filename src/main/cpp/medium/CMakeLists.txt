@@ -38,3 +38,5 @@ add_library(coin-change OBJECT 322-coin-change.h)
 add_library(recursive-coin-change OBJECT 322-recursive-coin-change.h)
 
 add_library(pacific-atlantic-water-flow OBJECT 417-pacific-atlantic-water-flow.h)
+
+add_library(shortest-bridge OBJECT 934-shortest-bridge.h)

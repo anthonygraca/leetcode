@@ -81,3 +81,7 @@ add_test(NAME recursive-coin-change-test COMMAND recursive-coin-change-test)
 add_executable(pacific-atlantic-water-flow-test 417-pacific-atlantic-water-flow-test.cpp)
 target_link_libraries(pacific-atlantic-water-flow-test gtest_main pacific-atlantic-water-flow)
 add_test(NAME pacific-atlantic-water-flow-test COMMAND pacific-atlantic-water-flow-test)
+
+add_executable(shortest-bridge-test 934-shortest-bridge-test.cpp)
+target_link_libraries(shortest-bridge-test gtest_main shortest-bridge)
+add_test(NAME shortest-bridge-test COMMAND shortest-bridge-test)
