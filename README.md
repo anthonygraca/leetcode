@@ -12,6 +12,9 @@
 [CMake](https://cmake.org/) (version >= 3.19.7) is the build tool that manages 
 all of the C++ code in this project. Code is compiled with a C++20 compiler.
 
+Exercise for the reader to investigate how to install CMake and a C++ Compiler 
+on your system.
+
 #### Normal Usage
 Do the "cmake dance". \
 `mkdir build` to create a separate build folder to isolate generated cmake build
@@ -55,6 +58,7 @@ files. \
 | [217](https://leetcode.com/problems/contains-duplicate/) - Contains Duplicate | Easy | Arrays & HashSets | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/main/cpp/easy/217-contains-duplicate.h) | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/test/cpp/easy/217-contains-duplicate-test.cpp) | O(n) | O(n) |
 | [226](https://leetcode.com/problems/invert-binary-tree/) - Invert Binary Tree | Easy | Binary Tree, Meme | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/main/cpp/easy/226-invert-binary-tree.h) | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/test/cpp/easy/226-invert-binary-tree-test.cpp) | O(n) | O(1) |
 | [238](https://leetcode.com/problems/product-of-array-except-self/) - Product of Array Except Self | Medium | Arrays | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/main/cpp/medium/238-product-of-array-except-self.h) | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/test/cpp/medium/238-product-of-array-except-self-test.cpp) | O(n) | O(1) |
+| [270](https://leetcode.com/problems/closest-binary-search-tree-value/) - Closest Binary Search Tree Value | Easy | Trees | [x](https://github.com/anthonygraca/leetcode/blob/main/src/main/cpp/easy/270-closest-binary-tree-value.h) | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/test/cpp/easy/270-closest-binary-tree-value-test.cpp) | O(logn) | O(1) |
 | [297](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) - Serialize and Deserialize Binary Tree | Hard | Tree Traversal | [x](https://github.com/anthonygraca/leetcode/blob/main/src/main/cpp/hard/297-serialize-and-deserialize-binary-tree.h) | [x](https://github.com/anthonygraca/leetcode/blob/main/src/test/cpp/hard/297-serialize-and-deserialize-binary-tree-test.cpp) | O(n) | O(n) |
 | [322](https://leetcode.com/problems/coin-change/) - Coin Change | Medium | Dynamic Programming & **Bottom Up/Tabulation** | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/main/cpp/medium/322-coin-change.h) | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/test/cpp/medium/322-coin-change-test.cpp) | O(amount * coins.size()) | O(n) |
 | [322](https://leetcode.com/problems/coin-change/)\* - **Recursive** Coin Change | Medium | Dynamic Programming & **Top Down/Memoization** | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/main/cpp/medium/322-recursive-coin-change.h) | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/test/cpp/medium/322-recursive-coin-change-test.cpp) | O(amount * coins.size()) | O(n) |

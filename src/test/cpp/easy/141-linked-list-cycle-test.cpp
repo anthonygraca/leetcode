@@ -2,7 +2,7 @@
 
 #include "gtest/gtest.h"
 
-#include "util/linked-list.h"
+#include "util/list-node.h"
 
 TEST(LinkedListCycle, FirstExample) {
   leetcode::ListNode a{3};
