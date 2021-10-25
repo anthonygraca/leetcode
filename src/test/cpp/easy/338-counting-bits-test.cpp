@@ -23,10 +23,10 @@ TEST(CountingBits, FirstExample) {
  *  3 --> 11
  *  4 --> 100
  *  5 --> 101
+*/
 TEST(CountingBits, SecondExample) {
   int n{5};
   leetcode::CountingBits solution;
   std::vector<int> expected{0, 1, 1, 2, 1, 2};
   ASSERT_EQ(expected, solution.countBits(n));
 }
-*/
