@@ -53,3 +53,8 @@ add_test(NAME closest-binary-tree-value-test COMMAND closest-binary-tree-value-t
 add_executable(counting-bits-test  338-counting-bits-test.cpp)
 target_link_libraries(counting-bits-test gtest_main counting-bits)
 add_test(NAME counting-bits-test COMMAND counting-bits-test)
+
+add_executable(longest-harmonious-subsequence-test 594-longest-harmonious-subsequence-test.cpp)
+target_link_libraries(longest-harmonious-subsequence-test gtest_main longest-harmonious-subsequence)
+add_test(NAME longest-harmonious-subsequence-test COMMAND longest-harmonious-subsequence-test)
+

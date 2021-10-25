@@ -12,11 +12,19 @@
 [CMake](https://cmake.org/) (version >= 3.19.7) is the build tool that manages 
 all of the C++ code in this project. Code is compiled with a C++20 compiler.
 
-Exercise for the reader to investigate how to install CMake and a C++ Compiler 
-on your system.
+Exercise left for the reader to investigate how to install CMake and a C++ 
+Compiler on your system.
 
 #### Normal Usage
-Do the "cmake dance". \
+1.) Git clone repository.  
+```
+git clone https://github.com/anthonygraca/leetcode
+```
+2.) Change directory into project root.  
+```
+cd leetcode
+```
+3.) Do the "cmake dance". \
 `mkdir build` to create a separate build folder to isolate generated cmake build
 files. \
 `cd build` to enter build folder. \
@@ -65,5 +73,6 @@ files. \
 | [338](https://leetcode.com/problems/counting-bits/) - Counting Bits | Easy | Dynamic Programming, Bit Manipulation | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/main/cpp/easy/338-counting-bits.h) | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/test/cpp/easy/338-counting-bits-test.cpp) | O(n) | O(n) |
 | [371](https://leetcode.com/problems/sum-of-two-integers/) - Sum of Two Integers | Medium | Binary | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/main/cpp/medium/371-sum-of-two-integers.h) | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/test/cpp/medium/371-sum-of-two-integers-test.cpp) | O(1) | O(1) |
 | [417](https://leetcode.com/problems/pacific-atlantic-water-flow/) - Pacific Atlantic Water Flow | Medium | Graph, DFS | [x](https://github.com/anthonygraca/leetcode/blob/main/src/main/cpp/medium/417-pacific-atlantic-water-flow.h) | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/test/cpp/medium/417-pacific-atlantic-water-flow-test.cpp) |  |  |
+| [594](https://leetcode.com/problems/longest-harmonious-subsequence/) - Longest Harmonious Subsequence | Easy | Arrays | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/main/cpp/easy/594-longest-harmonious-subsequency.h) | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/test/cpp/easy/594-longest-harmonious-subsequence-test.cpp) | O(n) | O(n) |
 | [934](https://leetcode.com/problems/shortest-bridge/) - Shortest Bridge | Medium | Graph, BFS | [x](https://github.com/anthonygraca/leetcode/blob/main/src/main/cpp/medium/934-shortest-bridge.h) | [:heavy_check_mark:](https://github.com/anthonygraca/leetcode/blob/main/src/test/cpp/medium/934-shortest-bridge-test.cpp) |  |  |
 | [1155](https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/) - Number of Dice Rolls With Target Sum | Medium | ? | [x](https://github.com/anthonygraca/leetcode/blob/main/src/main/cpp/medium/1155-number-of-dice-rolls-with-target-sum.h) | [x](https://github.com/anthonygraca/leetcode/blob/main/src/test/cpp/medium/1155-number-of-dice-rolls-with-target-sum-test.cpp) | | |

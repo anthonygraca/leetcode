@@ -25,3 +25,4 @@ add_library(closest-binary-tree-value OBJECT 270-closest-binary-tree-value.h)
 
 add_library(counting-bits OBJECT 338-counting-bits.h)
 
+add_library(longest-harmonious-subsequence OBJECT 594-longest-harmonious-subsequence.h)
