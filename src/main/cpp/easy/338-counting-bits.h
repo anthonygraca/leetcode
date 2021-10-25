@@ -19,27 +19,21 @@
 
 namespace leetcode {
 class CountingBits {
-  public:
-    std::vector<int> countBits(int n) {
-      int count{0};
-      std::vector<int> ans;
-      ans.push_back(0); // inserting zero-th element
-      for (int i{1}; i <= n; i++) {
-        if (((i-1) & 0x1) == 0) {
-          ans.push_back(ans[i-1]+1);
-        }
-        else {
-          int bit_flip{0};
-          int val{(i-1) >> 1};
-          while ((val & 0x1) == 1) {
-            bit_flip++;
-            val = val >> 1;
-          }
-          ans.push_back(ans[i-1]-bit_flip);
-        }
+public:
+  std::vector<int> countBits(int n) {
+    int count{0};
+    std::vector<int> ans;
+    ans.push_back(0); // inserting zero-th element
+    for (int i{1}; i <= n; i++) {
+      if (i % 2 == 0) {
+        ans.push_back(ans[i/2]);
       }
-      return ans;
+      else {
+        ans.push_back(ans[i-1] + 1);
+      }
     }
+    return ans;
+  }
 };
 } // namespace leetcode
 
