@@ -25,7 +25,12 @@ namespace leetcode {
 class NumberOf1Bits {
   public:
     int hammingWeight(uint32_t n) {
-      return 3;
+      int count{0};
+      while (n >= 1) {
+        count++;
+        n &= n-1;
+      }
+      return count;
     }
 };
 } // namespace leetcode
