@@ -30,6 +30,10 @@ add_executable(linked-list-cycle-test 141-linked-list-cycle-test.cpp)
 target_link_libraries(linked-list-cycle-test gtest_main linked-list-cycle)
 add_test(NAME linked-list-cycle-test COMMAND linked-list-cycle-test)
 
+add_executable(reverse-bits-test 190-reverse-bits-test.cpp)
+target_link_libraries(reverse-bits-test gtest_main reverse-bits)
+add_test(NAME reverse-bits-test COMMAND reverse-bits-test)
+
 add_executable(number-of-1-bits-test 191-number-of-1-bits-test.cpp)
 target_link_libraries(number-of-1-bits-test gtest_main number-of-1-bits)
 add_test(NAME number-of-1-bits-test COMMAND number-of-1-bits-test)
