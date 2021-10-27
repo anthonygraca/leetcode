@@ -11,3 +11,9 @@ TEST(ReverseBits, FirstExample) {
   ASSERT_EQ(expected, algo.reverseBits(n));
 }
 
+TEST(ReverseBits, DISABLED_SecondExample) {
+  uint32_t n{0b11111111111111111111111111111101};
+  leetcode::ReverseBits algo;
+  uint32_t expected{0b00111001011110000010100101000000};
+  ASSERT_EQ(expected, algo.reverseBits(n));
+}
