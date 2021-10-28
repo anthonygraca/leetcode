@@ -82,6 +82,10 @@ add_executable(pacific-atlantic-water-flow-test 417-pacific-atlantic-water-flow-
 target_link_libraries(pacific-atlantic-water-flow-test gtest_main pacific-atlantic-water-flow)
 add_test(NAME pacific-atlantic-water-flow-test COMMAND pacific-atlantic-water-flow-test)
 
+add_executable(longest-repeating-character-replacement-test 424-longest-repeating-character-replacement-test.cpp)
+target_link_libraries(longest-repeating-character-replacement-test gtest_main longest-repeating-character-replacement)
+add_test(NAME longest-repeating-character-replacement-test COMMAND longest-repeating-character-replacement-test)
+
 add_executable(shortest-bridge-test 934-shortest-bridge-test.cpp)
 target_link_libraries(shortest-bridge-test gtest_main shortest-bridge)
 add_test(NAME shortest-bridge-test COMMAND shortest-bridge-test)

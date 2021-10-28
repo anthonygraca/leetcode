@@ -20,21 +20,20 @@ namespace leetcode {
 class LongestSubstring {
   public:
     int lengthOfLongestSubstring(std::string s) {
-      int longest_length = 0;
+      auto longest_length{0};
       std::queue<char> q; 
       std::unordered_set<char> lookup;
-      for (int i = 0; i < s.length(); i++) {
-        while (lookup.find(s[i]) != lookup.end()) {
+      for (auto ch: s) {
+        while (lookup.find(ch) != lookup.end()) {
           lookup.erase(q.front());
           q.pop();
         }
-	lookup.insert(s[i]);
-        q.push(s[i]);
-	longest_length = max(longest_length, q.size());
+        lookup.insert(ch);
+        q.push(ch);
+        longest_length = std::max(longest_length, (int)q.size());
       }
       return longest_length;
     }
-    int max(int a, int b) { return (a > b) ? a : b; };
 };
 } // namespace leetcode
 
