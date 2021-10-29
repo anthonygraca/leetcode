@@ -26,6 +26,9 @@ public:
     std::queue<char> window;
     std::unordered_map<char, int> map;
     int longest_length = -1;
+    /* 
+     * dominant_term means the highest character that occupies the window
+     */
     int dominant_term = -1;
     for (auto ch : s) {
       window.push(ch);
@@ -37,6 +40,24 @@ public:
         dominant_term = std::max(dominant_term, map[ch]);
       }
       longest_length = std::max(longest_length, (int)window.size());
+    }
+    return longest_length;
+  }
+  int characterReplacementWithoutQueue(std::string& s, int k) {
+    int i = 0; int j = 0; int size_of_window = 0;
+    std::unordered_map<char, int> map;
+    int longest_length = -1;
+    int dominant_term = -1;
+    for (auto ch : s) {
+      j++;
+      map[ch]++;
+      dominant_term = std::max(dominant_term, map[ch]);
+      while ((j-i) - dominant_term > k) {
+        map[s[i]]--;
+        i++;
+        dominant_term = std::max(dominant_term, map[ch]);
+      }
+      longest_length = std::max(longest_length, (j-i));
     }
     return longest_length;
   }

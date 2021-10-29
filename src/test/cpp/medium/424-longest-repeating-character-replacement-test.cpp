@@ -23,3 +23,23 @@ TEST(LongestRepeatingCharacterReplacement, SecondExample) {
   leetcode::LongestRepeatingCharacterReplacement algo;
   ASSERT_EQ(4, algo.characterReplacement(s, k));
 }
+
+// Replace the two 'A's with two 'B's or vice versa.
+TEST(LongestRepeatingCharacterReplacementWithoutQueue, FirstExample) {
+  std::string s{"ABAB"};
+  int k{2};
+  leetcode::LongestRepeatingCharacterReplacement algo;
+  ASSERT_EQ(4, algo.characterReplacementWithoutQueue(s, k));
+}
+
+
+/*
+ Replace the one 'A' in the middle with 'B' and form "AABBBBA".
+ The substring "BBBB" has the longest repeating letters, which is 4.
+ */
+TEST(LongestRepeatingCharacterReplacementWithoutQueue, SecondExample) {
+  std::string s{"AABABBA"};
+  int k{1};
+  leetcode::LongestRepeatingCharacterReplacement algo;
+  ASSERT_EQ(4, algo.characterReplacementWithoutQueue(s, k));
+}
