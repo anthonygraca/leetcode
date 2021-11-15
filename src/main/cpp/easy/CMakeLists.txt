@@ -1,8 +1,12 @@
 add_library(two-sum OBJECT 1-two-sum.h)
 
+add_library(palindrome-number OBJECT 9-palindrome-number.h)
+
 add_library(merge-two-sorted-lists OBJECT 21-merge-two-sorted-lists.h)
 
 add_library(maximum-subarray OBJECT 53-maximum-subarray.h)
+
+add_library(plus-one OBJECT 66-plus-one.h)
 
 add_library(climbing-stairs OBJECT 70-climbing-stairs.h)
 add_library(recursive-climbing-stairs OBJECT 70-recursive-climbing-stairs.h)

@@ -2,6 +2,10 @@ add_executable(two-sum-test 1-two-sum-test.cpp)
 target_link_libraries(two-sum-test gtest_main two-sum)
 add_test(NAME two-sum-test COMMAND two-sum-test)
 
+add_executable(palindrome-number-test 9-palindrome-number-test.cpp)
+target_link_libraries(palindrome-number-test gtest_main palindrome-number)
+add_test(NAME palindrome-number-test COMMAND palindrome-number-test)
+
 add_executable(merge-two-sorted-lists-test 21-merge-two-sorted-lists-test.cpp)
 target_link_libraries(merge-two-sorted-lists-test gtest_main merge-two-sorted-lists linked-list-util)
 add_test(NAME merge-two-sorted-lists-test COMMAND merge-two-sorted-lists-test)
@@ -9,6 +13,10 @@ add_test(NAME merge-two-sorted-lists-test COMMAND merge-two-sorted-lists-test)
 add_executable(maximum-subarray-test 53-maximum-subarray-test.cpp)
 target_link_libraries(maximum-subarray-test gtest_main maximum-subarray)
 add_test(NAME maximum-subarray-test COMMAND maximum-subarray-test)
+
+add_executable(plus-one-test 66-plus-one-test.cpp)
+target_link_libraries(plus-one-test gtest_main plus-one)
+add_test(NAME plus-one-test COMMAND plus-one-test)
 
 add_executable(climbing-stairs-test 70-climbing-stairs-test.cpp)
 target_link_libraries(climbing-stairs-test gtest_main climbing-stairs)

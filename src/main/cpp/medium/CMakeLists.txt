@@ -4,6 +4,8 @@ add_library(add-two-numbers OBJECT
 add_library(longest-substring-without-repeating-characters OBJECT
             3-longest-substring-without-repeating-characters.h)
 
+add_library(reverse-integer OBJECT 7-reverse-integer.h)
+
 add_library(container-with-most-water OBJECT 11-container-with-most-water.h)
 
 add_library(3sum OBJECT 15-3sum.h)
@@ -18,6 +20,8 @@ add_library(insert-interval OBJECT 57-insert-interval.h)
 
 add_library(unique-paths OBJECT 62-unique-paths.h)
 add_library(iterative-unique-paths OBJECT 62-iterative-unique-paths.h)
+
+add_library(sort-colors OBJECT 75-sort-colors.h)
 
 add_library(clone-graph OBJECT 133-clone-graph.h)
 

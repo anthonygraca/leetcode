@@ -6,6 +6,10 @@ add_executable(longest-substring-without-repeating-characters-test 3-longest-sub
 target_link_libraries(longest-substring-without-repeating-characters-test gtest_main longest-substring-without-repeating-characters)
 add_test(NAME longest-substring-without-repeating-characters-test COMMAND longest-substring-without-repeating-characters-test)
 
+add_executable(reverse-integer-test 7-reverse-integer-test.cpp)
+target_link_libraries(reverse-integer-test gtest_main reverse-integer)
+add_test(NAME reverse-integer-test COMMAND reverse-integer-test)
+
 add_executable(container-with-most-water-test 11-container-with-most-water-test.cpp)
 target_link_libraries(container-with-most-water-test gtest_main container-with-most-water)
 add_test(NAME container-with-most-water-test COMMAND container-with-most-water-test)
@@ -37,6 +41,10 @@ add_test(NAME unique-paths-test COMMAND unique-paths-test)
 add_executable(iterative-unique-paths-test 62-iterative-unique-paths-test.cpp)
 target_link_libraries(iterative-unique-paths-test gtest_main iterative-unique-paths)
 add_test(NAME iterative-unique-paths-test COMMAND iterative-unique-paths-test)
+
+add_executable(sort-colors-test 75-sort-colors-test.cpp)
+target_link_libraries(sort-colors-test gtest_main sort-colors)
+add_test(NAME sort-colors-test COMMAND sort-colors-test)
 
 add_executable(clone-graph-test 133-clone-graph-test.cpp)
 target_link_libraries(clone-graph-test gtest_main clone-graph)
