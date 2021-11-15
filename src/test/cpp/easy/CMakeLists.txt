@@ -62,3 +62,7 @@ add_executable(longest-harmonious-subsequence-test 594-longest-harmonious-subseq
 target_link_libraries(longest-harmonious-subsequence-test gtest_main longest-harmonious-subsequence)
 add_test(NAME longest-harmonious-subsequence-test COMMAND longest-harmonious-subsequence-test)
 
+add_executable(rectangle-overlap-test 836-rectangle-overlap-test.cpp)
+target_link_libraries(rectangle-overlap-test gtest_main rectangle-overlap)
+add_test(NAME rectangle-overlap-test COMMAND rectangle-overlap-test)
+
