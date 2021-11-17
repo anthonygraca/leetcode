@@ -7,22 +7,17 @@ namespace leetcode {
 class PlusOne {
 public:
   std::vector<int> plusOne(std::vector<int>& input) {
-    int last_index = input.size() - 1;
-    if (input[last_index] < 9) {
-      input[last_index]++;
-      return input;
+    ++input.back();
+    for(int i = input.size() - 1; i > 0; i--) {
+      if (input[i] == 10) {
+        input[i] = 0;
+        input[i-1]++;
+      }
     }
-    while (input[last_index] == 9) {
-      input[last_index] = 0;
-      last_index--;
-    }
-    if (last_index < 0) {
+    if (input[0] == 10) {
+      input[0] = 0;
       input.insert(input.begin(), 1);
     }
-    else {
-      input[last_index]++;
-    }
-
     return input;
   }
 }; 
