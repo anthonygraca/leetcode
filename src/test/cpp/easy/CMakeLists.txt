@@ -30,6 +30,10 @@ add_executable(maximum-depth-of-binary-tree-test 104-maximum-depth-of-binary-tre
 target_link_libraries(maximum-depth-of-binary-tree-test gtest_main maximum-depth-of-binary-tree)
 add_test(NAME maximum-depth-of-binary-tree-test COMMAND maximum-depth-of-binary-tree-test)
 
+add_executable(path-sum-test 112-path-sum-test.cpp)
+target_link_libraries(path-sum-test gtest_main path-sum)
+add_test(NAME path-sum-test COMMAND path-sum-test)
+
 add_executable(best-time-to-buy-and-sell-stock-test 121-best-time-to-buy-and-sell-stock-test.cpp)
 target_link_libraries(best-time-to-buy-and-sell-stock-test gtest_main best-time-to-buy-and-sell-stock)
 add_test(NAME best-time-to-buy-and-sell-stock-test COMMAND best-time-to-buy-and-sell-stock-test)

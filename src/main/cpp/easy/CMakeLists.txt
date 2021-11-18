@@ -13,6 +13,8 @@ add_library(recursive-climbing-stairs OBJECT 70-recursive-climbing-stairs.h)
 
 add_library(maximum-depth-of-binary-tree OBJECT 104-maximum-depth-of-binary-tree.h)
 
+add_library(path-sum OBJECT 112-path-sum.h)
+
 add_library(best-time-to-buy-and-sell-stock OBJECT 121-best-time-to-buy-and-sell-stock.h)
 
 add_library(linked-list-cycle OBJECT 141-linked-list-cycle.h)
