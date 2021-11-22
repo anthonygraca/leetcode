@@ -17,3 +17,7 @@ add_test(NAME binary-tree-maximum-path-sum-test COMMAND binary-tree-maximum-path
 add_executable(serialize-and-deserialize-binary-tree-test 297-serialize-and-deserialize-binary-tree-test.cpp)
 target_link_libraries(serialize-and-deserialize-binary-tree-test gtest_main serialize-and-deserialize-binary-tree)
 add_test(NAME serialize-and-deserialize-binary-tree-test COMMAND serialize-and-deserialize-binary-tree-test)
+
+add_executable(maximum-height-by-stacking-cuboids-test 1691-maximum-height-by-stacking-cuboids-test.cpp)
+target_link_libraries(maximum-height-by-stacking-cuboids-test gtest_main maximum-height-by-stacking-cuboids)
+add_test(NAME maximum-height-by-stacking-cuboids-test COMMAND maximum-height-by-stacking-cuboids-test)

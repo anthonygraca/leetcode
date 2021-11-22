@@ -12,3 +12,6 @@ add_library(binary-tree-maximum-path-sum OBJECT
 
 add_library(serialize-and-deserialize-binary-tree OBJECT
             297-serialize-and-deserialize-binary-tree.h)
+
+add_library(maximum-height-by-stacking-cuboids OBJECT
+            1691-maximum-height-by-stacking-cuboids.h)
