@@ -70,6 +70,10 @@ add_executable(counting-bits-test  338-counting-bits-test.cpp)
 target_link_libraries(counting-bits-test gtest_main counting-bits)
 add_test(NAME counting-bits-test COMMAND counting-bits-test)
 
+add_executable(diameter-of-binary-tree-test 543-diameter-of-binary-tree-test.cpp)
+target_link_libraries(diameter-of-binary-tree-test gtest_main diameter-of-binary-tree)
+add_test(NAME diameter-of-binary-tree-test COMMAND diameter-of-binary-tree-test)
+
 add_executable(longest-harmonious-subsequence-test 594-longest-harmonious-subsequence-test.cpp)
 target_link_libraries(longest-harmonious-subsequence-test gtest_main longest-harmonious-subsequence)
 add_test(NAME longest-harmonious-subsequence-test COMMAND longest-harmonious-subsequence-test)
