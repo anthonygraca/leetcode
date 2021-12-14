@@ -19,7 +19,7 @@ TEST(PacificAtlanticWaterFlow, FirstExample) {
   ASSERT_EQ(expected, algo.pacificAtlantic(heights));
 }
 
-TEST(PacificAtlanticWaterFlow, DISABLED_SecondExample) {
+TEST(PacificAtlanticWaterFlow, SecondExample) {
   std::vector<std::vector<int>> heights = {
     {2,1},
     {1,2}
@@ -27,6 +27,79 @@ TEST(PacificAtlanticWaterFlow, DISABLED_SecondExample) {
   leetcode::PacificAtlanticWaterFlow algo;
   std::vector<std::vector<int>> expected = {
     {0,0}, {0,1}, {1,0}, {1,1}
+  };
+  ASSERT_EQ(expected, algo.pacificAtlantic(heights));
+}
+
+TEST(PacificAtlanticWaterFlow, CheckPacificLogicSimpleCase) {
+  std::vector<std::vector<int>> heights = {
+    {0,1},
+    {1,2}
+  };
+  leetcode::PacificAtlanticWaterFlow algo;
+  std::vector<std::vector<int>> expected = {
+    {0,1}, {1,0}, {1,1}
+  };
+  ASSERT_EQ(expected, algo.pacificAtlantic(heights));
+}
+
+TEST(PacificAtlanticWaterFlow, CheckPacificLogicComplexCase) {
+  std::vector<std::vector<int>> heights = {
+    {1,2,2,3,5},
+    {3,2,3,4,4},
+    {2,4,5,3,1},
+    {6,7,1,4,5},
+    {5,1,1,2,4}
+  };
+  leetcode::PacificAtlanticWaterFlow algo;
+  std::vector<std::vector<bool>> expected = {
+    {true, true, true, true, true},
+    {true, true, true, true, true},
+    {true, true, true, false, false},
+    {true, true, false, false, false},
+    {true, false, false, false, false}
+  };
+  auto pacific_paths = algo.findPathToPacific(heights);
+  for (int i = 0; i < expected.size(); i++) {
+    for (int j = 0; j < expected[0].size(); j++) {
+      ASSERT_EQ(expected[i][j], pacific_paths[i][j]);
+    }
+  }
+}
+
+TEST(PacificAtlanticWaterFlow, CheckAtlanticLogicComplexCase) {
+  std::vector<std::vector<int>> heights = {
+    {1,2,2,3,5},
+    {3,2,3,4,4},
+    {2,4,5,3,1},
+    {6,7,1,4,5},
+    {5,1,1,2,4}
+  };
+  leetcode::PacificAtlanticWaterFlow algo;
+  std::vector<std::vector<bool>> expected = {
+    {false, false, false, false, true},
+    {false, false, false, true, true},
+    {false, false, true, true, true},
+    {true, true, true, true, true},
+    {true, true, true, true, true}
+  };
+  auto atlantic_paths = algo.findPathToAtlantic(heights);
+  for (int i = 0; i < expected.size(); i++) {
+    for (int j = 0; j < expected[0].size(); j++) {
+      ASSERT_EQ(expected[i][j], atlantic_paths[i][j]) << "i: " << i << "and j: " << j;
+    }
+  }
+}
+
+
+TEST(PacificAtlanticWaterFlow, CheckAtlanticLogicSimpleCase) {
+  std::vector<std::vector<int>> heights = {
+    {2,1},
+    {1,0}
+  };
+  leetcode::PacificAtlanticWaterFlow algo;
+  std::vector<std::vector<int>> expected = {
+    {0,0}, {0,1}, {1,0}
   };
   ASSERT_EQ(expected, algo.pacificAtlantic(heights));
 }
