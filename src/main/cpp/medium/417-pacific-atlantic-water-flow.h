@@ -36,33 +36,34 @@ public:
     findPathToPacific(heights);
     findPathToAtlantic(heights);
     std::vector<std::vector<int>> expected;
-    for (int i = 0; i < heights.size(); i++) {
-      for (int j = 0; j < heights[0].size(); j++) {
+    int rows = heights.size();
+    int cols = heights[0].size();
+    for (int i = 0; i < rows; i++) {
+      for (int j = 0; j < cols; j++) {
         if (m_path_to_pacific[i][j] && m_path_to_atlantic[i][j]) {
           expected.push_back({i, j});
         }
       }
     }
-    /*
-    std::vector<std::vector<int>> expected = {
-      {0,4},{1,3},{1,4},{2,2},{3,0},{3,1},{4,0}
-    };
-    */
     return expected;
   }
 
   std::vector<std::vector<bool>> findPathToPacific(std::vector<std::vector<int>> heights) {
+    int rows = heights.size();
+    int cols = heights[0].size();
+    int min_row = 0;
+    int min_col = 0;
     m_path_to_pacific = std::vector<std::vector<bool>>(
-        heights.size(), std::vector<bool>(heights[0].size(), false));
+        heights.size(), std::vector<bool>(cols, false));
 
-    for (int i = 0; i < heights.size(); i++) {
+    for (int i = 0; i < rows; i++) {
       m_path_to_pacific[i][0] = true;
     }
-    for (int j = 0; j < heights[0].size(); j++) {
+    for (int j = 0; j < cols; j++) {
       m_path_to_pacific[0][j] = true;
     }
-    for (int i = 1; i < heights.size(); i++) {
-      for (int j = 1; j < heights[0].size(); j++) {
+    for (int i = 1; i < rows; i++) {
+      for (int j = 1; j < cols; j++) {
         int current_height = heights[i][j];
         bool is_path_up = false;
         bool is_path_left = false;
@@ -79,17 +80,21 @@ public:
   }
 
   std::vector<std::vector<bool>> findPathToAtlantic(std::vector<std::vector<int>> heights) {
+    int rows = heights.size();
+    int cols = heights[0].size();
+    int max_row = rows-1;
+    int max_col = cols-1;
     m_path_to_atlantic = std::vector<std::vector<bool>>(
-        heights.size(), std::vector<bool>(heights[0].size(), false));
+        rows, std::vector<bool>(cols, false));
 
-    for (int i = 0; i < heights.size(); i++) {
-      m_path_to_atlantic[i][heights.size()-1] = true;
+    for (int i = 0; i < rows; i++) {
+      m_path_to_atlantic[i][max_col] = true;
     }
-    for (int j = 0; j < heights[0].size(); j++) {
-      m_path_to_atlantic[heights[0].size()-1][j] = true;
+    for (int j = 0; j < cols; j++) {
+      m_path_to_atlantic[max_row][j] = true;
     }
-    for (int i = heights.size()-2; i >= 0; i--) {
-      for (int j = heights[0].size()-2; j >= 0; j--) {
+    for (int i = max_row-1; i >= 0; i--) {
+      for (int j = max_col-1; j >= 0; j--) {
         int current_height = heights[i][j];
         bool is_path_down = false;
         bool is_path_right = false;
