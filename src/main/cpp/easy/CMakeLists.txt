@@ -38,3 +38,5 @@ add_library(diameter-of-binary-tree OBJECT 543-diameter-of-binary-tree.h)
 add_library(longest-harmonious-subsequence OBJECT 594-longest-harmonious-subsequence.h)
 
 add_library(rectangle-overlap OBJECT 836-rectangle-overlap.h)
+
+add_library(find-the-town-judge OBJECT 997-find-the-town-judge.h)
