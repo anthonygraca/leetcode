@@ -82,3 +82,6 @@ add_executable(rectangle-overlap-test 836-rectangle-overlap-test.cpp)
 target_link_libraries(rectangle-overlap-test gtest_main rectangle-overlap)
 add_test(NAME rectangle-overlap-test COMMAND rectangle-overlap-test)
 
+add_executable(find-the-town-judge-test 997-find-the-town-judge-test.cpp)
+target_link_libraries(find-the-town-judge-test gtest_main find-the-town-judge)
+add_test(NAME find-the-town-judge-test COMMAND find-the-town-judge-test)
