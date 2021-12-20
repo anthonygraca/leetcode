@@ -1,7 +1,6 @@
-add_executable(two-sum-test 1-two-sum-test.cpp)
-target_link_libraries(two-sum-test gtest_main two-sum)
-add_test(NAME two-sum-test COMMAND two-sum-test)
+file(GLOB LEETCODE_EASY_TEST_SRC_FILES "*.cpp")
 
+<<<<<<< HEAD
 add_executable(palindrome-number-test 9-palindrome-number-test.cpp)
 target_link_libraries(palindrome-number-test gtest_main palindrome-number)
 add_test(NAME palindrome-number-test COMMAND palindrome-number-test)
@@ -82,3 +81,8 @@ add_executable(rectangle-overlap-test 836-rectangle-overlap-test.cpp)
 target_link_libraries(rectangle-overlap-test gtest_main rectangle-overlap)
 add_test(NAME rectangle-overlap-test COMMAND rectangle-overlap-test)
 
+=======
+foreach(file ${LEETCODE_EASY_TEST_SRC_FILES})
+    register_test_executable(${file})
+endforeach()
+>>>>>>> 412508f... Use custom function `register_library()` and `register_test_executable()` to register solution files as library and their corresponding unittests as test executable

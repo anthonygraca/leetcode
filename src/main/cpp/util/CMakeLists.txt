@@ -1,3 +1,5 @@
-add_library(list-node OBJECT list-node.h)
+file(GLOB LEETCODE_UTILS_SRC_FILES "*.h")
 
-add_library(tree-node OBJECT tree-node.h)
+foreach(file ${LEETCODE_UTILS_SRC_FILES})
+    register_library(${file})
+endforeach()

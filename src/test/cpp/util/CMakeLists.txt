@@ -1,1 +1,5 @@
-add_library(linked-list-util OBJECT linked-list.h)
+file(GLOB LEETCODE_TEST_UTILS_SRC_FILES "*.cpp")
+
+foreach(file ${LEETCODE_TEST_UTILS_SRC_FILES})
+    register_library(${file})
+endforeach()

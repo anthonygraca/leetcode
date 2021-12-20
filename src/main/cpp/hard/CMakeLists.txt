@@ -1,17 +1,5 @@
-add_library(median-of-two-sorted-arrays OBJECT
-            4-median-of-two-sorted-arrays.h)
+file(GLOB LEETCODE_HARD_SRC_FILES "*.h")
 
-add_library(merge-k-sorted-lists OBJECT
-            23-merge-k-sorted-lists.h)
-
-add_library(minimum-window-substring OBJECT
-            76-minimum-window-substring.h)
-
-add_library(binary-tree-maximum-path-sum OBJECT
-            124-binary-tree-maximum-path-sum.h)
-
-add_library(serialize-and-deserialize-binary-tree OBJECT
-            297-serialize-and-deserialize-binary-tree.h)
-
-add_library(maximum-height-by-stacking-cuboids OBJECT
-            1691-maximum-height-by-stacking-cuboids.h)
+foreach(file ${LEETCODE_HARD_SRC_FILES})
+    register_library(${file})
+endforeach()

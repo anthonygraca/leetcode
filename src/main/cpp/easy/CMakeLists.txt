@@ -1,5 +1,6 @@
-add_library(two-sum OBJECT 1-two-sum.h)
+file(GLOB LEETCODE_EASY_SRC_FILES "*.h")
 
+<<<<<<< HEAD
 add_library(palindrome-number OBJECT 9-palindrome-number.h)
 
 add_library(merge-two-sorted-lists OBJECT 21-merge-two-sorted-lists.h)
@@ -38,3 +39,8 @@ add_library(diameter-of-binary-tree OBJECT 543-diameter-of-binary-tree.h)
 add_library(longest-harmonious-subsequence OBJECT 594-longest-harmonious-subsequence.h)
 
 add_library(rectangle-overlap OBJECT 836-rectangle-overlap.h)
+=======
+foreach(file ${LEETCODE_EASY_SRC_FILES})
+    register_library(${file})
+endforeach()
+>>>>>>> 412508f... Use custom function `register_library()` and `register_test_executable()` to register solution files as library and their corresponding unittests as test executable
