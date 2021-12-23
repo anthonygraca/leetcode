@@ -1,23 +1,5 @@
-add_executable(median-of-two-sorted-arrays-test 4-median-of-two-sorted-arrays-test.cpp)
-target_link_libraries(median-of-two-sorted-arrays-test gtest_main median-of-two-sorted-arrays)
-add_test(NAME median-of-two-sorted-arrays-test COMMAND median-of-two-sorted-arrays-test)
+file(GLOB LEETCODE_HARD_TEST_SRC_FILES "*.cpp")
 
-add_executable(merge-k-sorted-lists-test 23-merge-k-sorted-lists-test.cpp)
-target_link_libraries(merge-k-sorted-lists-test gtest_main merge-k-sorted-lists)
-add_test(NAME merge-k-sorted-lists-test COMMAND merge-k-sorted-lists-test)
-
-add_executable(minimum-window-substring-test 76-minimum-window-substring-test.cpp)
-target_link_libraries(minimum-window-substring-test gtest_main minimum-window-substring)
-add_test(NAME minimum-window-substring-test COMMAND minimum-window-substring-test)
-
-add_executable(binary-tree-maximum-path-sum-test 124-binary-tree-maximum-path-sum-test.cpp)
-target_link_libraries(binary-tree-maximum-path-sum-test gtest_main binary-tree-maximum-path-sum)
-add_test(NAME binary-tree-maximum-path-sum-test COMMAND binary-tree-maximum-path-sum-test)
-
-add_executable(serialize-and-deserialize-binary-tree-test 297-serialize-and-deserialize-binary-tree-test.cpp)
-target_link_libraries(serialize-and-deserialize-binary-tree-test gtest_main serialize-and-deserialize-binary-tree)
-add_test(NAME serialize-and-deserialize-binary-tree-test COMMAND serialize-and-deserialize-binary-tree-test)
-
-add_executable(maximum-height-by-stacking-cuboids-test 1691-maximum-height-by-stacking-cuboids-test.cpp)
-target_link_libraries(maximum-height-by-stacking-cuboids-test gtest_main maximum-height-by-stacking-cuboids)
-add_test(NAME maximum-height-by-stacking-cuboids-test COMMAND maximum-height-by-stacking-cuboids-test)
+foreach(file ${LEETCODE_HARD_TEST_SRC_FILES})
+    register_test_executable(${file})
+endforeach()
